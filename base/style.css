@@ -20,3 +20,5 @@
 .btn-pink { margin: 0 auto; border-radius: 5px; cursor: pointer; padding: 2px; color: white; border: solid 1px #d2729e; background: #f895c2; background: -webkit-gradient(linear, left top, left bottom, from(#feb1d3), to(#f171ab)); background: -moz-linear-gradient(top, #feb1d3, #f171ab); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#feb1d3', endColorstr='#f171ab'); font-size: 12px; }
 .btn-pink:hover { background: #d57ea5; background: -webkit-gradient(linear, left top, left bottom, from(#f4aacb), to(#e86ca4)); background: -moz-linear-gradient(top, #f4aacb, #e86ca4); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4aacb', endColorstr='#e86ca4'); }
 .btn-row { text-align: center; clear: both; padding:3px;}
+
+.input-modify{width: 400px;height: 20px; }

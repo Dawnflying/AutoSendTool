@@ -171,6 +171,7 @@ function init() {
     if ("undefined" == typeof $ || "undefined" == typeof getUserInfo) setTimeout("init()", 500); else if (0 == $(".o-o-t-l-content").length) setTimeout("init()", 500); else if ($("body").attr("location") != location.href) {
         $("body").attr("location", location.href);
         orderList = localStorage.orderList ? JSON.parse(localStorage.orderList) : [];
+        skusTaoURLMapList = localStorage.skusTaoURLMapList?JSON.parse(localStorage.skusTaoURLMapList) : [];
         null == orderList && (orderList = []);
         "div[data-id]" == orderList.selector && (orderList.length = 0, orderList = []);
         for (; 3E3 < orderList.length;) orderList.splice(0, 1);
@@ -223,11 +224,11 @@ function getOrderButton(c) {
             a.address = "";
             a.comment = "";
             null == orderList && (orderList = localStorage.orderList ? JSON.parse(localStorage.orderList) : [], null == orderList && (orderList = []));
-            for (var e = null, d = 0; d < orderList.length; d++) if (orderList[d].OrderId ==
-                a.orderId && orderList[d].LinkMan) {
-                e = orderList[d];
-                break
-            }
+            for (var e = null, d = 0; d < orderList.length; d++)
+                if (orderList[d].OrderId == a.orderId && orderList[d].LinkMan) {
+                    e = orderList[d];
+                    break
+                }
             if (null == e) {
                 $.ajax({
                     type: "post",
@@ -296,8 +297,21 @@ function getOrderButton(c) {
                     //     }
                     // })
                 );
-                a = '<div class=\'btn-row\'><span class=\'btn-white\' onclick=\'window.open(\"main.html\", \"testwindow\", \"width=700,height=600\")\' data-role=\'link\'>修改关联</span></div>' +
-                    '<div class=\'btn-row\'><span class=\'btn-white\' data-url=\'https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\' data-role=\'order\' title=\'\'>????</span></div>';
+                var openUrl = null;
+                for (var index = 0; index < skusTaoURLMapList.length; index++) {
+                    if (skusTaoURLMapList[index].type == e.skus && skusTaoURLMapList[index].taoUrl != null) {
+                        openUrl = skusTaoURLMapList[index].taoUrl;
+                    }
+                }
+
+                if (openUrl != null)
+                    a = '<div class=\'btn-row\'><span class=\'btn-white\' data-type=\'' + base64Encode(e.skus) + '\' data-role=\'link\'>修改关联</span></div>' +
+                        '<div class=\'btn-row\'><span class=\'btn-white\' data-url=\'https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\' data-role=\'order\' title=\'\'>????</span></div>';
+                else {
+                    a = '<div class=\'btn-row\'><span class=\'btn-red\' data-type=\'' + base64Encode(e.skus) + '\' data-role=\'link\'>添加关联</span></div>';
+                }
+
+
                 if ("" != a && void 0 != a) {
                     var b = c.find("td:eq(2)");
                     b.find(".btn-row").remove();
@@ -306,12 +320,44 @@ function getOrderButton(c) {
                     a.find(".btn-black").css("color", "white");
                     b.append(a);
 
-                    var openUrl = null;
-                    for (var index = 0; index < skusTaoURLMapList.length; index++) {
-                        if (skusTaoURLMapList[index].OrderId == e.OrderId && skusTaoURLMapList[index].taoUrl != null) {
-                            openUrl = skusTaoURLMapList[index].taoUrl;
+
+                    a.find("span[data-role=link]").click(function () {
+                        var type  = $(this).attr("data-type");
+                        type = base64Decode(type);
+                        var openUrl = null;
+                        for (var index = 0; index < skusTaoURLMapList.length; index++) {
+                            if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {
+                                openUrl = skusTaoURLMapList[index].taoUrl;
+                            }
                         }
-                    }
+
+                        if (openUrl == null) {
+                            $(this).parent("o-o-t-l-c-list").append("<ul> <li>" + type + "</li><li><input type='text' /></li><li><input data-type=\'" + type + "\' class='url-modify' type='button' name='commit'/></li> </ul>");
+                        }
+                        else {
+                            $(this).parent("o-o-t-l-c-list").append("<ul> <li>" + type + "</li><li><input class='url-modify' type='text' value=\'" + openUrl + "\'/></li> <li><input data-type=\'" + type + "\' class='url-modify' type='button' name='commit'/></li> </ul>");
+                        }
+
+                        $(this).parent("o-o-t-l-c-list").find("input[class=url-modify]").click(function () {
+
+                            for (var index = 0; index < skusTaoURLMapList.length; index++) {
+                                var type = $(this).attr("data-type");
+                                type = base64Decode(type);
+                                var map = null;
+                                if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {
+                                    map = skusTaoURLMapList[index];
+                                }
+
+                                if(map !=null)
+                                    map.taoUrl = $(this).val();
+                                else
+                                    skusTaoURLMapList.push({type:type,taoUrl:$(this).val()});
+
+                            }
+
+                        });
+
+                    });
 
                     a.find("span[data-role=order]").each(function () {
                         // var a = base64Encode($(this).attr("data-url"));

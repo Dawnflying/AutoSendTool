@@ -1,169 +1,169 @@
 var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, skusTaoURLMapList = null;\n" +
-    "    shipping = [{shipping_id: \"1\", shipping_name: \"\u7533\u901a\u5feb\u9012\"}, {\n" +
-    "        shipping_id: \"3\",\n" +
-    "        shipping_name: \"\u767e\u4e16\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"44\", shipping_name: \"\u987a\u4e30\u5feb\u9012\"}, {\n" +
-    "        shipping_id: \"85\",\n" +
-    "        shipping_name: \"\u5706\u901a\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"88\", shipping_name: \"\u5954\u5954\u901f\u8fbe\"}, {\n" +
-    "        shipping_id: \"89\",\n" +
-    "        shipping_name: \"\u8d5b\u6fb3\u9012\"\n" +
-    "    }, {shipping_id: \"90\", shipping_name: \"\u665f\u90a6\u7269\u6d41\"}, {\n" +
-    "        shipping_id: \"115\",\n" +
-    "        shipping_name: \"\u4e2d\u901a\u5feb\u9012\"\n" +
+    "shipping = [{shipping_id: \"1\", shipping_name: \"\u7533\u901a\u5feb\u9012\"}, {\n" +
+    "    shipping_id: \"3\",\n" +
+    "    shipping_name: \"\u767e\u4e16\u5feb\u9012\"\n" +
+    "}, {shipping_id: \"44\", shipping_name: \"\u987a\u4e30\u5feb\u9012\"}, {\n" +
+    "    shipping_id: \"85\",\n" +
+    "    shipping_name: \"\u5706\u901a\u5feb\u9012\"\n" +
+    "}, {shipping_id: \"88\", shipping_name: \"\u5954\u5954\u901f\u8fbe\"}, {\n" +
+    "    shipping_id: \"89\",\n" +
+    "    shipping_name: \"\u8d5b\u6fb3\u9012\"\n" +
+    "}, {shipping_id: \"90\", shipping_name: \"\u665f\u90a6\u7269\u6d41\"}, {\n" +
+    "    shipping_id: \"115\",\n" +
+    "    shipping_name: \"\u4e2d\u901a\u5feb\u9012\"\n" +
+    "},\n" +
+    "    {shipping_id: \"116\", shipping_name: \"\u5168\u5cf0\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"117\",\n" +
+    "        shipping_name: \"\u4f18\u901f\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"118\", shipping_name: \"\u90ae\u653fEMS\"}, {\n" +
+    "        shipping_id: \"119\",\n" +
+    "        shipping_name: \"\u5929\u5929\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"120\", shipping_name: \"\u4eac\u4e1c\u914d\u9001\"}, {\n" +
+    "        shipping_id: \"121\",\n" +
+    "        shipping_name: \"\u97f5\u8fbe\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"122\", shipping_name: \"\u5feb\u6377\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"124\",\n" +
+    "        shipping_name: \"\u56fd\u901a\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"128\", shipping_name: \"\u5f53\u5f53\u51fa\u7248\u914d\u9001\"},\n" +
+    "    {shipping_id: \"129\", shipping_name: \"\u5b85\u6025\u9001\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"130\",\n" +
+    "        shipping_name: \"\u5982\u98ce\u8fbe\"\n" +
+    "    }, {shipping_id: \"131\", shipping_name: \"\u5fb7\u90a6\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"132\",\n" +
+    "        shipping_name: \"\u90ae\u653f\u5feb\u9012\u5305\u88f9\"\n" +
+    "    }, {shipping_id: \"133\", shipping_name: \"\u9f99\u90a6\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"135\",\n" +
+    "        shipping_name: \"\u8054\u90a6\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"136\", shipping_name: \"\u4e5d\u66f3\u4f9b\u5e94\u94fe\"}, {\n" +
+    "        shipping_id: \"137\",\n" +
+    "        shipping_name: \"\u767e\u57ce\u5f53\u65e5\u8fbe\u5feb\u9012\"\n" +
     "    },\n" +
-    "        {shipping_id: \"116\", shipping_name: \"\u5168\u5cf0\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"117\",\n" +
-    "            shipping_name: \"\u4f18\u901f\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"118\", shipping_name: \"\u90ae\u653fEMS\"}, {\n" +
-    "            shipping_id: \"119\",\n" +
-    "            shipping_name: \"\u5929\u5929\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"120\", shipping_name: \"\u4eac\u4e1c\u914d\u9001\"}, {\n" +
-    "            shipping_id: \"121\",\n" +
-    "            shipping_name: \"\u97f5\u8fbe\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"122\", shipping_name: \"\u5feb\u6377\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"124\",\n" +
-    "            shipping_name: \"\u56fd\u901a\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"128\", shipping_name: \"\u5f53\u5f53\u51fa\u7248\u914d\u9001\"},\n" +
-    "        {shipping_id: \"129\", shipping_name: \"\u5b85\u6025\u9001\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"130\",\n" +
-    "            shipping_name: \"\u5982\u98ce\u8fbe\"\n" +
-    "        }, {shipping_id: \"131\", shipping_name: \"\u5fb7\u90a6\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"132\",\n" +
-    "            shipping_name: \"\u90ae\u653f\u5feb\u9012\u5305\u88f9\"\n" +
-    "        }, {shipping_id: \"133\", shipping_name: \"\u9f99\u90a6\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"135\",\n" +
-    "            shipping_name: \"\u8054\u90a6\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"136\", shipping_name: \"\u4e5d\u66f3\u4f9b\u5e94\u94fe\"}, {\n" +
-    "            shipping_id: \"137\",\n" +
-    "            shipping_name: \"\u767e\u57ce\u5f53\u65e5\u8fbe\u5feb\u9012\"\n" +
-    "        },\n" +
-    "        {shipping_id: \"138\", shipping_name: \"\u8fbe\u8fbe\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"139\",\n" +
-    "            shipping_name: \"\u51bb\u5230\u5bb6\u7269\u6d41\"\n" +
-    "        }, {shipping_id: \"140\", shipping_name: \"\u5357\u4eac\u665f\u90a6\"}, {\n" +
-    "            shipping_id: \"141\",\n" +
-    "            shipping_name: \"\u5c71\u897f\u7ea2\u9a6c\u7532\"\n" +
-    "        }, {shipping_id: \"142\", shipping_name: \"\u4e07\u8c61\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"143\",\n" +
-    "            shipping_name: \"\u7acb\u5373\u9001\"\n" +
-    "        }, {shipping_id: \"144\", shipping_name: \"\u95e8\u5bf9\u95e8\"}, {\n" +
-    "            shipping_id: \"147\",\n" +
-    "            shipping_name: \"\u4e30\u7a0b\"\n" +
-    "        }, {shipping_id: \"148\", shipping_name: \"\u5b89\u8fbe\u4fe1\"},\n" +
-    "        {shipping_id: \"149\", shipping_name: \"\u6d77\u5916\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"150\",\n" +
-    "            shipping_name: \"\u98de\u8fdc\u7269\u6d41\"\n" +
-    "        }, {shipping_id: \"151\", shipping_name: \"\u5357\u90fd\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"152\",\n" +
-    "            shipping_name: \"\u6c47\u6587\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"154\", shipping_name: \"\u9ec4\u9a6c\u7532\"}, {\n" +
-    "            shipping_id: \"155\",\n" +
-    "            shipping_name: \"\u901f\u5c14\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"156\", shipping_name: \"\u4e9a\u9a6c\u900a\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"157\",\n" +
-    "            shipping_name: \"\u9ed1\u732b\u5b85\u6025\u4fbf\"\n" +
-    "        }, {\n" +
-    "            shipping_id: \"158\",\n" +
-    "            shipping_name: \"\u987a\u4e30\u822a\u8fd0\"\n" +
-    "        }, {shipping_id: \"159\", shipping_name: \"\u5706\u901a\u822a\u8fd0\"}, {\n" +
-    "            shipping_id: \"160\",\n" +
-    "            shipping_name: \"\u62fc\u597d\u8d27\"\n" +
-    "        }, {shipping_id: \"161\", shipping_name: \"\u4e0a\u6d77\u8d5b\u6fb3\u9012\"}, {\n" +
-    "            shipping_id: \"162\",\n" +
-    "            shipping_name: \"\u57ce\u5e02100 \"\n" +
-    "        }, {shipping_id: \"163\", shipping_name: \"\u829d\u9ebb\u5f00\u95e8\"}, {\n" +
-    "            shipping_id: \"164\",\n" +
-    "            shipping_name: \"\u987a\u6377\u4e30\u8fbe\"\n" +
-    "        }, {shipping_id: \"165\", shipping_name: \"\u6c47\u901a\u5c0f\u7ea2\u9a6c\"}, {\n" +
-    "            shipping_id: \"166\",\n" +
-    "            shipping_name: \"\u8fbd\u5b81\u5c0f\u7ea2\u9a6c\"\n" +
-    "        },\n" +
-    "        {shipping_id: \"167\", shipping_name: \"\u8fbd\u5b81\u9ec4\u9a6c\u7532\"}, {\n" +
-    "            shipping_id: \"168\",\n" +
-    "            shipping_name: \"\u6c5f\u82cf\u8d5b\u6fb3\u9012\"\n" +
-    "        }, {shipping_id: \"169\", shipping_name: \"\u4e09\u4eba\u884c\"}, {\n" +
-    "            shipping_id: \"170\",\n" +
-    "            shipping_name: \"\u901a\u548c\u4f73\u9012\"\n" +
-    "        }, {shipping_id: \"171\", shipping_name: \"\u901f\u6377\"}, {\n" +
-    "            shipping_id: \"172\",\n" +
-    "            shipping_name: \"\u4fe1\u8bfa\u8fc5\u8fbe\"\n" +
-    "        }, {shipping_id: \"173\", shipping_name: \"\u98ce\u5148\u751f\"}, {\n" +
-    "            shipping_id: \"174\",\n" +
-    "            shipping_name: \"\u5bbd\u5bb9\"\n" +
-    "        }, {shipping_id: \"175\", shipping_name: \"\u5e7f\u5dde\u9014\u5ba2\"},\n" +
-    "        {shipping_id: \"176\", shipping_name: \"\u5c0f\u7ea2\u5e3d\"}, {\n" +
-    "            shipping_id: \"177\",\n" +
-    "            shipping_name: \"\u9e4f\u8fbe\"\n" +
-    "        }, {shipping_id: \"178\", shipping_name: \"\u798f\u5efa\u98de\u8fdc\"}, {\n" +
-    "            shipping_id: \"179\",\n" +
-    "            shipping_name: \"E\u7279\u5feb\"\n" +
-    "        }, {shipping_id: \"180\", shipping_name: \"\u5546\u5bb6\u81ea\u5efa\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"181\",\n" +
-    "            shipping_name: \"\u4e91\u9e1f\"\n" +
-    "        }, {shipping_id: \"182\", shipping_name: \"\u4fdd\u8fbe\"}, {\n" +
-    "            shipping_id: \"183\",\n" +
-    "            shipping_name: \"\u8de8\u8d8a\u901f\u9012\"\n" +
-    "        }, {shipping_id: \"184\", shipping_name: \"\u5409\u6797\u9ec4\u9a6c\u7532\"},\n" +
-    "        {shipping_id: \"185\", shipping_name: \"\u57ce\u9645\u901f\u9012\"}, {\n" +
-    "            shipping_id: \"186\",\n" +
-    "            shipping_name: \"usps\"\n" +
-    "        }, {shipping_id: \"187\", shipping_name: \"\u9752\u5c9b\u5b89\u6377\"}, {\n" +
-    "            shipping_id: \"188\",\n" +
-    "            shipping_name: \"\u5927\u97e9\u901a\u8fd0\"\n" +
-    "        }, {shipping_id: \"189\", shipping_name: \"\u68d2\u68d2\u7cd6\"}, {\n" +
-    "            shipping_id: \"190\",\n" +
-    "            shipping_name: \"\u9014\u9c9c\"\n" +
-    "        }, {shipping_id: \"191\", shipping_name: \"\u83dc\u9e1f\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"193\",\n" +
-    "            shipping_name: \"\u6c47\u7ad9\u4f17\u4eab\"\n" +
-    "        }, {shipping_id: \"194\", shipping_name: \"\u6d3e\u5ba2\"}, {\n" +
-    "            shipping_id: \"195\",\n" +
-    "            shipping_name: \"\u8d1d\u6d77\u56fd\u9645\u901f\u9012\"\n" +
-    "        }, {shipping_id: \"196\", shipping_name: \"\u4e30\u6cf0\u56fd\u9645\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"197\",\n" +
-    "            shipping_name: \"\u73af\u7403\u901f\u8fd0\"\n" +
-    "        }, {shipping_id: \"198\", shipping_name: \"168\u987a\u53d1\u901f\u9012\"}, {\n" +
-    "            shipping_id: \"199\",\n" +
-    "            shipping_name: \"\u5168\u7403\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"200\", shipping_name: \"\u7a0b\u5149\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"201\",\n" +
-    "            shipping_name: \"\u5168\u4e00\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"203\", shipping_name: \"\u4e1c\u9a8f\u5feb\u6377\"}, {\n" +
-    "            shipping_id: \"205\",\n" +
-    "            shipping_name: \"\u8fdc\u6210\u5feb\u8fd0\"\n" +
-    "        }, {shipping_id: \"206\", shipping_name: \"\u98ce\u817e\u56fd\u9645\u901f\u9012\"}, {\n" +
-    "            shipping_id: \"207\",\n" +
-    "            shipping_name: \"\u7b28\u9e1f\u8f6c\u8fd0\"\n" +
-    "        }, {shipping_id: \"208\", shipping_name: \"\u5b89\u80fd\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"209\",\n" +
-    "            shipping_name: \"\u8054\u4f17\u56fd\u9645\u5feb\u8fd0\"\n" +
-    "        }, {shipping_id: \"210\", shipping_name: \"\u5929\u5730\u534e\u5b87\"}, {\n" +
-    "            shipping_id: \"211\",\n" +
-    "            shipping_name: \"\u4e2d\u90ae\u901f\u9012\"\n" +
-    "        }, {shipping_id: \"212\", shipping_name: \"hi\u6dd8\u6613 \"}, {\n" +
-    "            shipping_id: \"213\",\n" +
-    "            shipping_name: \"EMS-\u56fd\u9645\u4ef6\"\n" +
-    "        }, {shipping_id: \"214\", shipping_name: \"\u4e2d\u94c1\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"215\",\n" +
-    "            shipping_name: \"\u695a\u6e90\u7269\u6d41\"\n" +
-    "        }, {shipping_id: \"216\", shipping_name: \"\u65b0\u90a6\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"217\",\n" +
-    "            shipping_name: \"Flash Express\"\n" +
-    "        }, {shipping_id: \"218\", shipping_name: \"\u65b0\u987a\u4e30NSF\"}, {\n" +
-    "            shipping_id: \"219\",\n" +
-    "            shipping_name: \"\u9510\u6717\u5feb\u9012\"\n" +
-    "        }, {shipping_id: \"220\", shipping_name: \"\u738b\u9053\u56fd\u9645\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"221\",\n" +
-    "            shipping_name: \"DCS GLOBAL\"\n" +
-    "        },\n" +
-    "        {shipping_id: \"222\", shipping_name: \"\u8fc5\u901f\u5feb\u9012\"}, {\n" +
-    "            shipping_id: \"223\",\n" +
-    "            shipping_name: \"\u5bcc\u817e\u8fbe\u56fd\u9645\u8d27\u8fd0\"\n" +
-    "        }, {shipping_id: \"224\", shipping_name: \"\u7426\u5cf0\u7269\u6d41\"}, {\n" +
-    "            shipping_id: \"225\",\n" +
-    "            shipping_name: \"\u91d1\u8fd0\u901a\u7269\u6d41\"\n" +
-    "        }, {shipping_id: \"226\", shipping_name: \"EWE\u5168\u7403\u5feb\u9012\"}], successCount = 0, failCount = 0,\n" +
+    "    {shipping_id: \"138\", shipping_name: \"\u8fbe\u8fbe\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"139\",\n" +
+    "        shipping_name: \"\u51bb\u5230\u5bb6\u7269\u6d41\"\n" +
+    "    }, {shipping_id: \"140\", shipping_name: \"\u5357\u4eac\u665f\u90a6\"}, {\n" +
+    "        shipping_id: \"141\",\n" +
+    "        shipping_name: \"\u5c71\u897f\u7ea2\u9a6c\u7532\"\n" +
+    "    }, {shipping_id: \"142\", shipping_name: \"\u4e07\u8c61\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"143\",\n" +
+    "        shipping_name: \"\u7acb\u5373\u9001\"\n" +
+    "    }, {shipping_id: \"144\", shipping_name: \"\u95e8\u5bf9\u95e8\"}, {\n" +
+    "        shipping_id: \"147\",\n" +
+    "        shipping_name: \"\u4e30\u7a0b\"\n" +
+    "    }, {shipping_id: \"148\", shipping_name: \"\u5b89\u8fbe\u4fe1\"},\n" +
+    "    {shipping_id: \"149\", shipping_name: \"\u6d77\u5916\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"150\",\n" +
+    "        shipping_name: \"\u98de\u8fdc\u7269\u6d41\"\n" +
+    "    }, {shipping_id: \"151\", shipping_name: \"\u5357\u90fd\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"152\",\n" +
+    "        shipping_name: \"\u6c47\u6587\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"154\", shipping_name: \"\u9ec4\u9a6c\u7532\"}, {\n" +
+    "        shipping_id: \"155\",\n" +
+    "        shipping_name: \"\u901f\u5c14\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"156\", shipping_name: \"\u4e9a\u9a6c\u900a\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"157\",\n" +
+    "        shipping_name: \"\u9ed1\u732b\u5b85\u6025\u4fbf\"\n" +
+    "    }, {\n" +
+    "        shipping_id: \"158\",\n" +
+    "        shipping_name: \"\u987a\u4e30\u822a\u8fd0\"\n" +
+    "    }, {shipping_id: \"159\", shipping_name: \"\u5706\u901a\u822a\u8fd0\"}, {\n" +
+    "        shipping_id: \"160\",\n" +
+    "        shipping_name: \"\u62fc\u597d\u8d27\"\n" +
+    "    }, {shipping_id: \"161\", shipping_name: \"\u4e0a\u6d77\u8d5b\u6fb3\u9012\"}, {\n" +
+    "        shipping_id: \"162\",\n" +
+    "        shipping_name: \"\u57ce\u5e02100 \"\n" +
+    "    }, {shipping_id: \"163\", shipping_name: \"\u829d\u9ebb\u5f00\u95e8\"}, {\n" +
+    "        shipping_id: \"164\",\n" +
+    "        shipping_name: \"\u987a\u6377\u4e30\u8fbe\"\n" +
+    "    }, {shipping_id: \"165\", shipping_name: \"\u6c47\u901a\u5c0f\u7ea2\u9a6c\"}, {\n" +
+    "        shipping_id: \"166\",\n" +
+    "        shipping_name: \"\u8fbd\u5b81\u5c0f\u7ea2\u9a6c\"\n" +
+    "    },\n" +
+    "    {shipping_id: \"167\", shipping_name: \"\u8fbd\u5b81\u9ec4\u9a6c\u7532\"}, {\n" +
+    "        shipping_id: \"168\",\n" +
+    "        shipping_name: \"\u6c5f\u82cf\u8d5b\u6fb3\u9012\"\n" +
+    "    }, {shipping_id: \"169\", shipping_name: \"\u4e09\u4eba\u884c\"}, {\n" +
+    "        shipping_id: \"170\",\n" +
+    "        shipping_name: \"\u901a\u548c\u4f73\u9012\"\n" +
+    "    }, {shipping_id: \"171\", shipping_name: \"\u901f\u6377\"}, {\n" +
+    "        shipping_id: \"172\",\n" +
+    "        shipping_name: \"\u4fe1\u8bfa\u8fc5\u8fbe\"\n" +
+    "    }, {shipping_id: \"173\", shipping_name: \"\u98ce\u5148\u751f\"}, {\n" +
+    "        shipping_id: \"174\",\n" +
+    "        shipping_name: \"\u5bbd\u5bb9\"\n" +
+    "    }, {shipping_id: \"175\", shipping_name: \"\u5e7f\u5dde\u9014\u5ba2\"},\n" +
+    "    {shipping_id: \"176\", shipping_name: \"\u5c0f\u7ea2\u5e3d\"}, {\n" +
+    "        shipping_id: \"177\",\n" +
+    "        shipping_name: \"\u9e4f\u8fbe\"\n" +
+    "    }, {shipping_id: \"178\", shipping_name: \"\u798f\u5efa\u98de\u8fdc\"}, {\n" +
+    "        shipping_id: \"179\",\n" +
+    "        shipping_name: \"E\u7279\u5feb\"\n" +
+    "    }, {shipping_id: \"180\", shipping_name: \"\u5546\u5bb6\u81ea\u5efa\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"181\",\n" +
+    "        shipping_name: \"\u4e91\u9e1f\"\n" +
+    "    }, {shipping_id: \"182\", shipping_name: \"\u4fdd\u8fbe\"}, {\n" +
+    "        shipping_id: \"183\",\n" +
+    "        shipping_name: \"\u8de8\u8d8a\u901f\u9012\"\n" +
+    "    }, {shipping_id: \"184\", shipping_name: \"\u5409\u6797\u9ec4\u9a6c\u7532\"},\n" +
+    "    {shipping_id: \"185\", shipping_name: \"\u57ce\u9645\u901f\u9012\"}, {\n" +
+    "        shipping_id: \"186\",\n" +
+    "        shipping_name: \"usps\"\n" +
+    "    }, {shipping_id: \"187\", shipping_name: \"\u9752\u5c9b\u5b89\u6377\"}, {\n" +
+    "        shipping_id: \"188\",\n" +
+    "        shipping_name: \"\u5927\u97e9\u901a\u8fd0\"\n" +
+    "    }, {shipping_id: \"189\", shipping_name: \"\u68d2\u68d2\u7cd6\"}, {\n" +
+    "        shipping_id: \"190\",\n" +
+    "        shipping_name: \"\u9014\u9c9c\"\n" +
+    "    }, {shipping_id: \"191\", shipping_name: \"\u83dc\u9e1f\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"193\",\n" +
+    "        shipping_name: \"\u6c47\u7ad9\u4f17\u4eab\"\n" +
+    "    }, {shipping_id: \"194\", shipping_name: \"\u6d3e\u5ba2\"}, {\n" +
+    "        shipping_id: \"195\",\n" +
+    "        shipping_name: \"\u8d1d\u6d77\u56fd\u9645\u901f\u9012\"\n" +
+    "    }, {shipping_id: \"196\", shipping_name: \"\u4e30\u6cf0\u56fd\u9645\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"197\",\n" +
+    "        shipping_name: \"\u73af\u7403\u901f\u8fd0\"\n" +
+    "    }, {shipping_id: \"198\", shipping_name: \"168\u987a\u53d1\u901f\u9012\"}, {\n" +
+    "        shipping_id: \"199\",\n" +
+    "        shipping_name: \"\u5168\u7403\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"200\", shipping_name: \"\u7a0b\u5149\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"201\",\n" +
+    "        shipping_name: \"\u5168\u4e00\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"203\", shipping_name: \"\u4e1c\u9a8f\u5feb\u6377\"}, {\n" +
+    "        shipping_id: \"205\",\n" +
+    "        shipping_name: \"\u8fdc\u6210\u5feb\u8fd0\"\n" +
+    "    }, {shipping_id: \"206\", shipping_name: \"\u98ce\u817e\u56fd\u9645\u901f\u9012\"}, {\n" +
+    "        shipping_id: \"207\",\n" +
+    "        shipping_name: \"\u7b28\u9e1f\u8f6c\u8fd0\"\n" +
+    "    }, {shipping_id: \"208\", shipping_name: \"\u5b89\u80fd\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"209\",\n" +
+    "        shipping_name: \"\u8054\u4f17\u56fd\u9645\u5feb\u8fd0\"\n" +
+    "    }, {shipping_id: \"210\", shipping_name: \"\u5929\u5730\u534e\u5b87\"}, {\n" +
+    "        shipping_id: \"211\",\n" +
+    "        shipping_name: \"\u4e2d\u90ae\u901f\u9012\"\n" +
+    "    }, {shipping_id: \"212\", shipping_name: \"hi\u6dd8\u6613 \"}, {\n" +
+    "        shipping_id: \"213\",\n" +
+    "        shipping_name: \"EMS-\u56fd\u9645\u4ef6\"\n" +
+    "    }, {shipping_id: \"214\", shipping_name: \"\u4e2d\u94c1\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"215\",\n" +
+    "        shipping_name: \"\u695a\u6e90\u7269\u6d41\"\n" +
+    "    }, {shipping_id: \"216\", shipping_name: \"\u65b0\u90a6\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"217\",\n" +
+    "        shipping_name: \"Flash Express\"\n" +
+    "    }, {shipping_id: \"218\", shipping_name: \"\u65b0\u987a\u4e30NSF\"}, {\n" +
+    "        shipping_id: \"219\",\n" +
+    "        shipping_name: \"\u9510\u6717\u5feb\u9012\"\n" +
+    "    }, {shipping_id: \"220\", shipping_name: \"\u738b\u9053\u56fd\u9645\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"221\",\n" +
+    "        shipping_name: \"DCS GLOBAL\"\n" +
+    "    },\n" +
+    "    {shipping_id: \"222\", shipping_name: \"\u8fc5\u901f\u5feb\u9012\"}, {\n" +
+    "        shipping_id: \"223\",\n" +
+    "        shipping_name: \"\u5bcc\u817e\u8fbe\u56fd\u9645\u8d27\u8fd0\"\n" +
+    "    }, {shipping_id: \"224\", shipping_name: \"\u7426\u5cf0\u7269\u6d41\"}, {\n" +
+    "        shipping_id: \"225\",\n" +
+    "        shipping_name: \"\u91d1\u8fd0\u901a\u7269\u6d41\"\n" +
+    "    }, {shipping_id: \"226\", shipping_name: \"EWE\u5168\u7403\u5feb\u9012\"}], successCount = 0, failCount = 0,\n" +
     "    orderRows = [], orderIndex = 0;\n" +
     "init();\n" +
     "\n" +
@@ -171,6 +171,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "    if (\"undefined\" == typeof $ || \"undefined\" == typeof getUserInfo) setTimeout(\"init()\", 500); else if (0 == $(\".o-o-t-l-content\").length) setTimeout(\"init()\", 500); else if ($(\"body\").attr(\"location\") != location.href) {\n" +
     "        $(\"body\").attr(\"location\", location.href);\n" +
     "        orderList = localStorage.orderList ? JSON.parse(localStorage.orderList) : [];\n" +
+    "        skusTaoURLMapList = localStorage.skusTaoURLMapList?JSON.parse(localStorage.skusTaoURLMapList) : [];\n" +
     "        null == orderList && (orderList = []);\n" +
     "        \"div[data-id]\" == orderList.selector && (orderList.length = 0, orderList = []);\n" +
     "        for (; 3E3 < orderList.length;) orderList.splice(0, 1);\n" +
@@ -223,11 +224,11 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "            a.address = \"\";\n" +
     "            a.comment = \"\";\n" +
     "            null == orderList && (orderList = localStorage.orderList ? JSON.parse(localStorage.orderList) : [], null == orderList && (orderList = []));\n" +
-    "            for (var e = null, d = 0; d < orderList.length; d++) if (orderList[d].OrderId ==\n" +
-    "                a.orderId && orderList[d].LinkMan) {\n" +
-    "                e = orderList[d];\n" +
-    "                break\n" +
-    "            }\n" +
+    "            for (var e = null, d = 0; d < orderList.length; d++)\n" +
+    "                if (orderList[d].OrderId == a.orderId && orderList[d].LinkMan) {\n" +
+    "                    e = orderList[d];\n" +
+    "                    break\n" +
+    "                }\n" +
     "            if (null == e) {\n" +
     "                $.ajax({\n" +
     "                    type: \"post\",\n" +
@@ -296,16 +297,82 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "                    //     }\n" +
     "                    // })\n" +
     "                );\n" +
-    "                a = '<div class=\\'btn-row\\'><input type=\"text\" value=\\\"https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\\\" </div><div class=\\'btn-row\\'><span class=\\'btn-white\\' onclick=\\'window.open(\\\"main.html\\\", \\\"testwindow\\\", \\\"width=700,height=600\\\")\\' data-role=\\'link\\'>修改关联</span></div><div class=\\'btn-row\\'><span class=\\'btn-white\\' data-url=\\'https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\\' data-role=\\'order\\' title=\\'\\'>????</span></div>';\n" +
+    "                var openUrl = null;\n" +
+    "                for (var index = 0; index < skusTaoURLMapList.length; index++) {\n" +
+    "                    if (skusTaoURLMapList[index].type == e.skus && skusTaoURLMapList[index].taoUrl != null) {\n" +
+    "                        openUrl = skusTaoURLMapList[index].taoUrl;\n" +
+    "                    }\n" +
+    "                }\n" +
+    "\n" +
+    "                if (openUrl != null)\n" +
+    "                    a = '<div class=\\'btn-row\\'><span class=\\'btn-white\\' data-type=\\'' + base64Encode(e.skus) + '\\' data-role=\\'link\\'>修改关联</span></div>' +\n" +
+    "                        '<div class=\\'btn-row\\'><span class=\\'btn-white\\' data-url=\\'https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\\' data-role=\\'order\\' title=\\'\\'>再次采购</span></div>';\n" +
+    "                else {\n" +
+    "                    a = '<div class=\\'btn-row\\'><span class=\\'btn-red\\' data-type=\\'' + base64Encode(e.skus) + '\\' data-role=\\'link\\'>添加关联</span></div>';\n" +
+    "                }\n" +
+    "\n" +
+    "\n" +
     "                if (\"\" != a && void 0 != a) {\n" +
     "                    var b = c.find(\"td:eq(2)\");\n" +
     "                    b.find(\".btn-row\").remove();\n" +
     "                    a = $(a);\n" +
-    "                    var elements = a;\n" +
     "                    a.css(\"min-width\", \"78px\");\n" +
     "                    a.find(\".btn-black\").css(\"color\", \"white\");\n" +
     "                    b.append(a);\n" +
-    "                    var openUrl = a.find(\"input\").val();\n" +
+    "\n" +
+    "\n" +
+    "                    a.find(\"span[data-role=link]\").click(function () {\n" +
+    "                        $(this).hide(); \n"+
+    "                        console.log(\"clicked!!!\") \n"+
+    "                        var type = $(this).attr(\"data-type\");\n" +
+    "                        type = base64Decode(type);           \n"+
+    "                        var openUrl = null;\n" +
+    "                        console.log(skusTaoURLMapList) \n"+
+    "                        for (var index = 0; index < skusTaoURLMapList.length; index++) {\n" +
+    "                            if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {\n" +
+    "                                openUrl = skusTaoURLMapList[index].taoUrl;\n" +
+    "                            }\n" +
+    "                        }\n" +
+    "\n" +
+    "                        console.log($(this).parents(\"table[class=pdd-dui-table]\")); \n"+
+    "                        if (openUrl == null) {\n" +
+    "                            $(this).parents(\"table[class=pdd-dui-table]\").append(\"<ul class='ul-modify'><li><input class='input-modify' type='text' /></li><li><input data-type=\\'\" + base64Encode(type) + \"\\' class='btn-rosy url-modify' type='button' value='\u786e\u8ba4'/></li> </ul>\");\n" +
+    "                        }\n" +
+    "                        else {\n" +
+    "                            $(this).parents(\"table[class=pdd-dui-table]\").append(\"<ul class='ul-modify'><li><input class='input-modify' type='text' value=\\'\" + openUrl + \"\\'/></li> <li><input data-type=\\'\" + base64Encode(type) + \"\\' class='btn-rosy  url-modify' type='button' value='\u786e\u8ba4'/></li> </ul>\");\n" +
+    "                        }\n" +
+    "\n" +
+    "                        $(this).parents(\".o-o-t-l-c-list\").find(\"input[type=button]\").click(function () {\n" +
+    "                            console.log($(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\")); \n"+
+    "                            $(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\").removeClass('btn-red').addClass('btn-white').text('修改关联'); \n"+
+    "                            $(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\").parent().append(\"<div class='btn-row'><span class='btn-white' data-url='\"+ $('.input-modify').val() +\"' data-role='order' >再次采购</span></div>\"); \n"+
+    "                            $(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\").show(); \n"+
+    "                            if(skusTaoURLMapList.length == 0)\n" +
+    "                            { \n" +
+    "                                    var type = $(this).attr(\"data-type\");\n"+
+    "                                    skusTaoURLMapList.push({type:type,taoUrl:$('.input-modify').val()});\n" +
+    "                                    $(this).parents('.ul-modify').remove();\n" +
+    "                                    return;\n"+
+    "                            }\n" +
+    "                            for (var index = 0; index < skusTaoURLMapList.length; index++) {\n" +
+    "                                var type = $(this).attr(\"data-type\");\n" +
+    "                                var map = null;\n" +
+    "                                if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {\n" +
+    "                                    map = skusTaoURLMapList[index];\n" +
+    "                                }\n" +
+    "                                console.log(map);\n" +
+    "                                if(map !=null)\n" +
+    "                                    map.taoUrl = $('.input-modify').val();\n" +
+    "                                else\n" +
+    "                                    skusTaoURLMapList.push({type:type,taoUrl:$('.input-modify').val()});\n" +
+    "\n" +
+    "                            }\n" +
+    "                            console.log(skusTaoURLMapList); \n"+
+    "                            $(this).parents('.ul-modify').remove();\n" +
+    "                        });\n" +
+    "\n" +
+    "                    });\n" +
+    "\n" +
     "                    a.find(\"span[data-role=order]\").each(function () {\n" +
     "                        // var a = base64Encode($(this).attr(\"data-url\"));\n" +
     "                        $(this).attr(\"data-url\", openUrl);\n" +
@@ -313,6 +380,8 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "                            openOrder(this)\n" +
     "                        })\n" +
     "                    });\n" +
+    "\n" +
+    "\n" +
     "                    a.find(\".btn-black\").click(function () {\n" +
     "                        $(this).hide()\n" +
     "                    });\n" +
