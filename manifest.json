@@ -1,0 +1,46 @@
+﻿{
+    "name": "蘑助手",
+    "description": "帮助蘑菇街、拼多多商家从淘宝采购下单、同步发货。为效率而生、节省采购发货时间",
+    "version": "1.6.0",
+    "background": {
+        "scripts": [
+            "js/sample.js",
+            "js/taobao.js",
+            "js/detail.js",
+            "base/base.js",
+            "base/base64.js",
+            "base/xiaodian.user.js",
+			"base/jquery-1.12.4.min.js",
+			"background/background.js",
+			"background/backgroundLogic.js"
+        ]
+    },
+    "content_scripts": [],
+    "permissions": [
+        "background",
+        "tabs",
+        "cookies",
+        "storage",
+        "*://*.taobao.com/*", 
+        "*://*.1688.com/*", 
+        "*://*.tmall.com/*",
+        "*://*.alipay.com/*",
+        "*://*.xiaodian.com/*",
+        "*://*.mogujie.com/*",
+        "*://*.meilishuo.com/*",
+        "*://*.jd.com/*",
+        "*://*.pinduoduo.com/*",
+        "*://*.yangkeduo.com/*",
+        "*://*.mozhushou.com/*"
+    ],
+    "browser_action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "蘑助手"
+    },
+    "icons": {
+        "19": "image/ico19.png",
+        "48": "image/ico48.png",
+        "128": "image/ico128.png"
+    },
+    "manifest_version": 2
+}

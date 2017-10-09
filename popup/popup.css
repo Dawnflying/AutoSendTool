@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+
+body { overflow: hidden; margin: 0px; padding: 0px; background-color: #F8F8FF; }
+
+.loginer { text-align: center; margin-right: 10px; font-family: "微软雅黑"; font-weight: 900; }
+.imgtop { background-color: #FFE7BA; height: 20px; width: 190px; background-image: url(/image/toppic2.jpg); margin-bottom: 3px; }
+.itemrec { width: 0.1px; padding: 1px; height: 13px; display: none; }
+.itemrec1 { display: inline; position: absolute; left: 15px; }
+.itemrec2 { display: inline; position: absolute; right: 15px; }
+.red .itemrec { background-color:red;}
+.blue .itemrec { background-color:blue;}
+ 
+.itemDiv { cursor: pointer; text-align: center; padding: 1px 3px; font-family: sans-serif; margin-top: 1px; border-bottom: 1px dotted orange; width: 180px; height: 20px; }
+.itemDiv:hover { color: black; font-weight: 900; }
