@@ -1,169 +1,169 @@
 var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, skusTaoURLMapList = null;\n" +
-    "shipping = [{shipping_id: \"1\", shipping_name: \"\u7533\u901a\u5feb\u9012\"}, {\n" +
+    "shipping = [{shipping_id: \"1\", shipping_name: \"申通快递\"}, {\n" +
     "    shipping_id: \"3\",\n" +
-    "    shipping_name: \"\u767e\u4e16\u5feb\u9012\"\n" +
-    "}, {shipping_id: \"44\", shipping_name: \"\u987a\u4e30\u5feb\u9012\"}, {\n" +
+    "    shipping_name: \"百世快递\"\n" +
+    "}, {shipping_id: \"44\", shipping_name: \"顺丰快递\"}, {\n" +
     "    shipping_id: \"85\",\n" +
-    "    shipping_name: \"\u5706\u901a\u5feb\u9012\"\n" +
-    "}, {shipping_id: \"88\", shipping_name: \"\u5954\u5954\u901f\u8fbe\"}, {\n" +
+    "    shipping_name: \"圆通快递\"\n" +
+    "}, {shipping_id: \"88\", shipping_name: \"奔奔速达\"}, {\n" +
     "    shipping_id: \"89\",\n" +
-    "    shipping_name: \"\u8d5b\u6fb3\u9012\"\n" +
-    "}, {shipping_id: \"90\", shipping_name: \"\u665f\u90a6\u7269\u6d41\"}, {\n" +
+    "    shipping_name: \"赛澳递\"\n" +
+    "}, {shipping_id: \"90\", shipping_name: \"晟邦物流\"}, {\n" +
     "    shipping_id: \"115\",\n" +
-    "    shipping_name: \"\u4e2d\u901a\u5feb\u9012\"\n" +
+    "    shipping_name: \"中通快递\"\n" +
     "},\n" +
-    "    {shipping_id: \"116\", shipping_name: \"\u5168\u5cf0\u5feb\u9012\"}, {\n" +
+    "    {shipping_id: \"116\", shipping_name: \"全峰快递\"}, {\n" +
     "        shipping_id: \"117\",\n" +
-    "        shipping_name: \"\u4f18\u901f\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"118\", shipping_name: \"\u90ae\u653fEMS\"}, {\n" +
+    "        shipping_name: \"优速快递\"\n" +
+    "    }, {shipping_id: \"118\", shipping_name: \"邮政EMS\"}, {\n" +
     "        shipping_id: \"119\",\n" +
-    "        shipping_name: \"\u5929\u5929\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"120\", shipping_name: \"\u4eac\u4e1c\u914d\u9001\"}, {\n" +
+    "        shipping_name: \"天天快递\"\n" +
+    "    }, {shipping_id: \"120\", shipping_name: \"京东配送\"}, {\n" +
     "        shipping_id: \"121\",\n" +
-    "        shipping_name: \"\u97f5\u8fbe\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"122\", shipping_name: \"\u5feb\u6377\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"韵达快递\"\n" +
+    "    }, {shipping_id: \"122\", shipping_name: \"快捷快递\"}, {\n" +
     "        shipping_id: \"124\",\n" +
-    "        shipping_name: \"\u56fd\u901a\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"128\", shipping_name: \"\u5f53\u5f53\u51fa\u7248\u914d\u9001\"},\n" +
-    "    {shipping_id: \"129\", shipping_name: \"\u5b85\u6025\u9001\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"国通快递\"\n" +
+    "    }, {shipping_id: \"128\", shipping_name: \"当当出版配送\"},\n" +
+    "    {shipping_id: \"129\", shipping_name: \"宅急送快递\"}, {\n" +
     "        shipping_id: \"130\",\n" +
-    "        shipping_name: \"\u5982\u98ce\u8fbe\"\n" +
-    "    }, {shipping_id: \"131\", shipping_name: \"\u5fb7\u90a6\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"如风达\"\n" +
+    "    }, {shipping_id: \"131\", shipping_name: \"德邦快递\"}, {\n" +
     "        shipping_id: \"132\",\n" +
-    "        shipping_name: \"\u90ae\u653f\u5feb\u9012\u5305\u88f9\"\n" +
-    "    }, {shipping_id: \"133\", shipping_name: \"\u9f99\u90a6\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"邮政快递包裹\"\n" +
+    "    }, {shipping_id: \"133\", shipping_name: \"龙邦快递\"}, {\n" +
     "        shipping_id: \"135\",\n" +
-    "        shipping_name: \"\u8054\u90a6\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"136\", shipping_name: \"\u4e5d\u66f3\u4f9b\u5e94\u94fe\"}, {\n" +
+    "        shipping_name: \"联邦快递\"\n" +
+    "    }, {shipping_id: \"136\", shipping_name: \"九曳供应链\"}, {\n" +
     "        shipping_id: \"137\",\n" +
-    "        shipping_name: \"\u767e\u57ce\u5f53\u65e5\u8fbe\u5feb\u9012\"\n" +
+    "        shipping_name: \"百城当日达快递\"\n" +
     "    },\n" +
-    "    {shipping_id: \"138\", shipping_name: \"\u8fbe\u8fbe\u5feb\u9012\"}, {\n" +
+    "    {shipping_id: \"138\", shipping_name: \"达达快递\"}, {\n" +
     "        shipping_id: \"139\",\n" +
-    "        shipping_name: \"\u51bb\u5230\u5bb6\u7269\u6d41\"\n" +
-    "    }, {shipping_id: \"140\", shipping_name: \"\u5357\u4eac\u665f\u90a6\"}, {\n" +
+    "        shipping_name: \"冻到家物流\"\n" +
+    "    }, {shipping_id: \"140\", shipping_name: \"南京晟邦\"}, {\n" +
     "        shipping_id: \"141\",\n" +
-    "        shipping_name: \"\u5c71\u897f\u7ea2\u9a6c\u7532\"\n" +
-    "    }, {shipping_id: \"142\", shipping_name: \"\u4e07\u8c61\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"山西红马甲\"\n" +
+    "    }, {shipping_id: \"142\", shipping_name: \"万象物流\"}, {\n" +
     "        shipping_id: \"143\",\n" +
-    "        shipping_name: \"\u7acb\u5373\u9001\"\n" +
-    "    }, {shipping_id: \"144\", shipping_name: \"\u95e8\u5bf9\u95e8\"}, {\n" +
+    "        shipping_name: \"立即送\"\n" +
+    "    }, {shipping_id: \"144\", shipping_name: \"门对门\"}, {\n" +
     "        shipping_id: \"147\",\n" +
-    "        shipping_name: \"\u4e30\u7a0b\"\n" +
-    "    }, {shipping_id: \"148\", shipping_name: \"\u5b89\u8fbe\u4fe1\"},\n" +
-    "    {shipping_id: \"149\", shipping_name: \"\u6d77\u5916\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"丰程\"\n" +
+    "    }, {shipping_id: \"148\", shipping_name: \"安达信\"},\n" +
+    "    {shipping_id: \"149\", shipping_name: \"海外快递\"}, {\n" +
     "        shipping_id: \"150\",\n" +
-    "        shipping_name: \"\u98de\u8fdc\u7269\u6d41\"\n" +
-    "    }, {shipping_id: \"151\", shipping_name: \"\u5357\u90fd\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"飞远物流\"\n" +
+    "    }, {shipping_id: \"151\", shipping_name: \"南都快递\"}, {\n" +
     "        shipping_id: \"152\",\n" +
-    "        shipping_name: \"\u6c47\u6587\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"154\", shipping_name: \"\u9ec4\u9a6c\u7532\"}, {\n" +
+    "        shipping_name: \"汇文快递\"\n" +
+    "    }, {shipping_id: \"154\", shipping_name: \"黄马甲\"}, {\n" +
     "        shipping_id: \"155\",\n" +
-    "        shipping_name: \"\u901f\u5c14\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"156\", shipping_name: \"\u4e9a\u9a6c\u900a\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"速尔快递\"\n" +
+    "    }, {shipping_id: \"156\", shipping_name: \"亚马逊物流\"}, {\n" +
     "        shipping_id: \"157\",\n" +
-    "        shipping_name: \"\u9ed1\u732b\u5b85\u6025\u4fbf\"\n" +
+    "        shipping_name: \"黑猫宅急便\"\n" +
     "    }, {\n" +
     "        shipping_id: \"158\",\n" +
-    "        shipping_name: \"\u987a\u4e30\u822a\u8fd0\"\n" +
-    "    }, {shipping_id: \"159\", shipping_name: \"\u5706\u901a\u822a\u8fd0\"}, {\n" +
+    "        shipping_name: \"顺丰航运\"\n" +
+    "    }, {shipping_id: \"159\", shipping_name: \"圆通航运\"}, {\n" +
     "        shipping_id: \"160\",\n" +
-    "        shipping_name: \"\u62fc\u597d\u8d27\"\n" +
-    "    }, {shipping_id: \"161\", shipping_name: \"\u4e0a\u6d77\u8d5b\u6fb3\u9012\"}, {\n" +
+    "        shipping_name: \"拼好货\"\n" +
+    "    }, {shipping_id: \"161\", shipping_name: \"上海赛澳递\"}, {\n" +
     "        shipping_id: \"162\",\n" +
-    "        shipping_name: \"\u57ce\u5e02100 \"\n" +
-    "    }, {shipping_id: \"163\", shipping_name: \"\u829d\u9ebb\u5f00\u95e8\"}, {\n" +
+    "        shipping_name: \"城市100 \"\n" +
+    "    }, {shipping_id: \"163\", shipping_name: \"芝麻开门\"}, {\n" +
     "        shipping_id: \"164\",\n" +
-    "        shipping_name: \"\u987a\u6377\u4e30\u8fbe\"\n" +
-    "    }, {shipping_id: \"165\", shipping_name: \"\u6c47\u901a\u5c0f\u7ea2\u9a6c\"}, {\n" +
+    "        shipping_name: \"顺捷丰达\"\n" +
+    "    }, {shipping_id: \"165\", shipping_name: \"汇通小红马\"}, {\n" +
     "        shipping_id: \"166\",\n" +
-    "        shipping_name: \"\u8fbd\u5b81\u5c0f\u7ea2\u9a6c\"\n" +
+    "        shipping_name: \"辽宁小红马\"\n" +
     "    },\n" +
-    "    {shipping_id: \"167\", shipping_name: \"\u8fbd\u5b81\u9ec4\u9a6c\u7532\"}, {\n" +
+    "    {shipping_id: \"167\", shipping_name: \"辽宁黄马甲\"}, {\n" +
     "        shipping_id: \"168\",\n" +
-    "        shipping_name: \"\u6c5f\u82cf\u8d5b\u6fb3\u9012\"\n" +
-    "    }, {shipping_id: \"169\", shipping_name: \"\u4e09\u4eba\u884c\"}, {\n" +
+    "        shipping_name: \"江苏赛澳递\"\n" +
+    "    }, {shipping_id: \"169\", shipping_name: \"三人行\"}, {\n" +
     "        shipping_id: \"170\",\n" +
-    "        shipping_name: \"\u901a\u548c\u4f73\u9012\"\n" +
-    "    }, {shipping_id: \"171\", shipping_name: \"\u901f\u6377\"}, {\n" +
+    "        shipping_name: \"通和佳递\"\n" +
+    "    }, {shipping_id: \"171\", shipping_name: \"速捷\"}, {\n" +
     "        shipping_id: \"172\",\n" +
-    "        shipping_name: \"\u4fe1\u8bfa\u8fc5\u8fbe\"\n" +
-    "    }, {shipping_id: \"173\", shipping_name: \"\u98ce\u5148\u751f\"}, {\n" +
+    "        shipping_name: \"信诺迅达\"\n" +
+    "    }, {shipping_id: \"173\", shipping_name: \"风先生\"}, {\n" +
     "        shipping_id: \"174\",\n" +
-    "        shipping_name: \"\u5bbd\u5bb9\"\n" +
-    "    }, {shipping_id: \"175\", shipping_name: \"\u5e7f\u5dde\u9014\u5ba2\"},\n" +
-    "    {shipping_id: \"176\", shipping_name: \"\u5c0f\u7ea2\u5e3d\"}, {\n" +
+    "        shipping_name: \"宽容\"\n" +
+    "    }, {shipping_id: \"175\", shipping_name: \"广州途客\"},\n" +
+    "    {shipping_id: \"176\", shipping_name: \"小红帽\"}, {\n" +
     "        shipping_id: \"177\",\n" +
-    "        shipping_name: \"\u9e4f\u8fbe\"\n" +
-    "    }, {shipping_id: \"178\", shipping_name: \"\u798f\u5efa\u98de\u8fdc\"}, {\n" +
+    "        shipping_name: \"鹏达\"\n" +
+    "    }, {shipping_id: \"178\", shipping_name: \"福建飞远\"}, {\n" +
     "        shipping_id: \"179\",\n" +
-    "        shipping_name: \"E\u7279\u5feb\"\n" +
-    "    }, {shipping_id: \"180\", shipping_name: \"\u5546\u5bb6\u81ea\u5efa\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"E特快\"\n" +
+    "    }, {shipping_id: \"180\", shipping_name: \"商家自建物流\"}, {\n" +
     "        shipping_id: \"181\",\n" +
-    "        shipping_name: \"\u4e91\u9e1f\"\n" +
-    "    }, {shipping_id: \"182\", shipping_name: \"\u4fdd\u8fbe\"}, {\n" +
+    "        shipping_name: \"云鸟\"\n" +
+    "    }, {shipping_id: \"182\", shipping_name: \"保达\"}, {\n" +
     "        shipping_id: \"183\",\n" +
-    "        shipping_name: \"\u8de8\u8d8a\u901f\u9012\"\n" +
-    "    }, {shipping_id: \"184\", shipping_name: \"\u5409\u6797\u9ec4\u9a6c\u7532\"},\n" +
-    "    {shipping_id: \"185\", shipping_name: \"\u57ce\u9645\u901f\u9012\"}, {\n" +
+    "        shipping_name: \"跨越速递\"\n" +
+    "    }, {shipping_id: \"184\", shipping_name: \"吉林黄马甲\"},\n" +
+    "    {shipping_id: \"185\", shipping_name: \"城际速递\"}, {\n" +
     "        shipping_id: \"186\",\n" +
     "        shipping_name: \"usps\"\n" +
-    "    }, {shipping_id: \"187\", shipping_name: \"\u9752\u5c9b\u5b89\u6377\"}, {\n" +
+    "    }, {shipping_id: \"187\", shipping_name: \"青岛安捷\"}, {\n" +
     "        shipping_id: \"188\",\n" +
-    "        shipping_name: \"\u5927\u97e9\u901a\u8fd0\"\n" +
-    "    }, {shipping_id: \"189\", shipping_name: \"\u68d2\u68d2\u7cd6\"}, {\n" +
+    "        shipping_name: \"大韩通运\"\n" +
+    "    }, {shipping_id: \"189\", shipping_name: \"棒棒糖\"}, {\n" +
     "        shipping_id: \"190\",\n" +
-    "        shipping_name: \"\u9014\u9c9c\"\n" +
-    "    }, {shipping_id: \"191\", shipping_name: \"\u83dc\u9e1f\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"途鲜\"\n" +
+    "    }, {shipping_id: \"191\", shipping_name: \"菜鸟快递\"}, {\n" +
     "        shipping_id: \"193\",\n" +
-    "        shipping_name: \"\u6c47\u7ad9\u4f17\u4eab\"\n" +
-    "    }, {shipping_id: \"194\", shipping_name: \"\u6d3e\u5ba2\"}, {\n" +
+    "        shipping_name: \"汇站众享\"\n" +
+    "    }, {shipping_id: \"194\", shipping_name: \"派客\"}, {\n" +
     "        shipping_id: \"195\",\n" +
-    "        shipping_name: \"\u8d1d\u6d77\u56fd\u9645\u901f\u9012\"\n" +
-    "    }, {shipping_id: \"196\", shipping_name: \"\u4e30\u6cf0\u56fd\u9645\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"贝海国际速递\"\n" +
+    "    }, {shipping_id: \"196\", shipping_name: \"丰泰国际快递\"}, {\n" +
     "        shipping_id: \"197\",\n" +
-    "        shipping_name: \"\u73af\u7403\u901f\u8fd0\"\n" +
-    "    }, {shipping_id: \"198\", shipping_name: \"168\u987a\u53d1\u901f\u9012\"}, {\n" +
+    "        shipping_name: \"环球速运\"\n" +
+    "    }, {shipping_id: \"198\", shipping_name: \"168顺发速递\"}, {\n" +
     "        shipping_id: \"199\",\n" +
-    "        shipping_name: \"\u5168\u7403\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"200\", shipping_name: \"\u7a0b\u5149\u5feb\u9012\"}, {\n" +
+    "        shipping_name: \"全球快递\"\n" +
+    "    }, {shipping_id: \"200\", shipping_name: \"程光快递\"}, {\n" +
     "        shipping_id: \"201\",\n" +
-    "        shipping_name: \"\u5168\u4e00\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"203\", shipping_name: \"\u4e1c\u9a8f\u5feb\u6377\"}, {\n" +
+    "        shipping_name: \"全一快递\"\n" +
+    "    }, {shipping_id: \"203\", shipping_name: \"东骏快捷\"}, {\n" +
     "        shipping_id: \"205\",\n" +
-    "        shipping_name: \"\u8fdc\u6210\u5feb\u8fd0\"\n" +
-    "    }, {shipping_id: \"206\", shipping_name: \"\u98ce\u817e\u56fd\u9645\u901f\u9012\"}, {\n" +
+    "        shipping_name: \"远成快运\"\n" +
+    "    }, {shipping_id: \"206\", shipping_name: \"风腾国际速递\"}, {\n" +
     "        shipping_id: \"207\",\n" +
-    "        shipping_name: \"\u7b28\u9e1f\u8f6c\u8fd0\"\n" +
-    "    }, {shipping_id: \"208\", shipping_name: \"\u5b89\u80fd\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"笨鸟转运\"\n" +
+    "    }, {shipping_id: \"208\", shipping_name: \"安能物流\"}, {\n" +
     "        shipping_id: \"209\",\n" +
-    "        shipping_name: \"\u8054\u4f17\u56fd\u9645\u5feb\u8fd0\"\n" +
-    "    }, {shipping_id: \"210\", shipping_name: \"\u5929\u5730\u534e\u5b87\"}, {\n" +
+    "        shipping_name: \"联众国际快运\"\n" +
+    "    }, {shipping_id: \"210\", shipping_name: \"天地华宇\"}, {\n" +
     "        shipping_id: \"211\",\n" +
-    "        shipping_name: \"\u4e2d\u90ae\u901f\u9012\"\n" +
-    "    }, {shipping_id: \"212\", shipping_name: \"hi\u6dd8\u6613 \"}, {\n" +
+    "        shipping_name: \"中邮速递\"\n" +
+    "    }, {shipping_id: \"212\", shipping_name: \"hi淘易 \"}, {\n" +
     "        shipping_id: \"213\",\n" +
-    "        shipping_name: \"EMS-\u56fd\u9645\u4ef6\"\n" +
-    "    }, {shipping_id: \"214\", shipping_name: \"\u4e2d\u94c1\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"EMS-国际件\"\n" +
+    "    }, {shipping_id: \"214\", shipping_name: \"中铁物流\"}, {\n" +
     "        shipping_id: \"215\",\n" +
-    "        shipping_name: \"\u695a\u6e90\u7269\u6d41\"\n" +
-    "    }, {shipping_id: \"216\", shipping_name: \"\u65b0\u90a6\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"楚源物流\"\n" +
+    "    }, {shipping_id: \"216\", shipping_name: \"新邦物流\"}, {\n" +
     "        shipping_id: \"217\",\n" +
     "        shipping_name: \"Flash Express\"\n" +
-    "    }, {shipping_id: \"218\", shipping_name: \"\u65b0\u987a\u4e30NSF\"}, {\n" +
+    "    }, {shipping_id: \"218\", shipping_name: \"新顺丰NSF\"}, {\n" +
     "        shipping_id: \"219\",\n" +
-    "        shipping_name: \"\u9510\u6717\u5feb\u9012\"\n" +
-    "    }, {shipping_id: \"220\", shipping_name: \"\u738b\u9053\u56fd\u9645\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"锐朗快递\"\n" +
+    "    }, {shipping_id: \"220\", shipping_name: \"王道国际物流\"}, {\n" +
     "        shipping_id: \"221\",\n" +
     "        shipping_name: \"DCS GLOBAL\"\n" +
     "    },\n" +
-    "    {shipping_id: \"222\", shipping_name: \"\u8fc5\u901f\u5feb\u9012\"}, {\n" +
+    "    {shipping_id: \"222\", shipping_name: \"迅速快递\"}, {\n" +
     "        shipping_id: \"223\",\n" +
-    "        shipping_name: \"\u5bcc\u817e\u8fbe\u56fd\u9645\u8d27\u8fd0\"\n" +
-    "    }, {shipping_id: \"224\", shipping_name: \"\u7426\u5cf0\u7269\u6d41\"}, {\n" +
+    "        shipping_name: \"富腾达国际货运\"\n" +
+    "    }, {shipping_id: \"224\", shipping_name: \"琦峰物流\"}, {\n" +
     "        shipping_id: \"225\",\n" +
-    "        shipping_name: \"\u91d1\u8fd0\u901a\u7269\u6d41\"\n" +
-    "    }, {shipping_id: \"226\", shipping_name: \"EWE\u5168\u7403\u5feb\u9012\"}], successCount = 0, failCount = 0,\n" +
+    "        shipping_name: \"金运通物流\"\n" +
+    "    }, {shipping_id: \"226\", shipping_name: \"EWE全球快递\"}], successCount = 0, failCount = 0,\n" +
     "    orderRows = [], orderIndex = 0;\n" +
     "init();\n" +
     "\n" +
@@ -171,7 +171,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "    if (\"undefined\" == typeof $ || \"undefined\" == typeof getUserInfo) setTimeout(\"init()\", 500); else if (0 == $(\".o-o-t-l-content\").length) setTimeout(\"init()\", 500); else if ($(\"body\").attr(\"location\") != location.href) {\n" +
     "        $(\"body\").attr(\"location\", location.href);\n" +
     "        orderList = localStorage.orderList ? JSON.parse(localStorage.orderList) : [];\n" +
-    "        skusTaoURLMapList = localStorage.skusTaoURLMapList?JSON.parse(localStorage.skusTaoURLMapList) : [];\n" +
+    "        skusTaoURLMapList = localStorage.skusTaoURLMapList ? JSON.parse(localStorage.skusTaoURLMapList) : [];\n" +
     "        null == orderList && (orderList = []);\n" +
     "        \"div[data-id]\" == orderList.selector && (orderList.length = 0, orderList = []);\n" +
     "        for (; 3E3 < orderList.length;) orderList.splice(0, 1);\n" +
@@ -181,7 +181,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "                $(\"body\").attr(\"clen\", $(\".o-o-t-l-content\").html().length);\n" +
     "                setTimeout(\"checkItems()\", 1E3)\n" +
     "            });\n" +
-    "        $(\".ez-box a:contains('\u67e5\u8be2')\").click(function () {\n" +
+    "        $(\".ez-box a:contains('查询')\").click(function () {\n" +
     "            $(\"body\").attr(\"location\", \"\");\n" +
     "            $(\"body\").attr(\"clen\", $(\".o-o-t-l-content\").html().length);\n" +
     "            setTimeout(\"checkItems()\", 1E3)\n" +
@@ -197,7 +197,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "\n" +
     "function checkItems() {\n" +
     "    if (null == user || \"\" == user.shopid) user = getUserInfo();\n" +
-    "    null == user || \"\" == user.shopid ? setTimeout(\"checkItems()\", 1E3) : 0 == $(\".o-o-t-l-c-list\").length ? setTimeout(\"checkItems()\", 1E3) : 1 == $(\".o-o-t-l-c-list\").length && 0 < $($(\".o-o-t-l-c-list\")[0]).text().indexOf(\"\u6ca1\u6709\u67e5\u8be2\u5230\") ? setTimeout(\"checkItems()\", 1E3) : $(\"body\").attr(\"clen\") == $(\".o-o-t-l-content\").html().length ? setTimeout(\"checkItems()\", 1E3) : ($(\"th:contains('\u5546\u54c1ID')\").html(\"<label><input type=checkbox class=chkItem checked style='vertical-align: -2px;' />\u5546\u54c1ID</label>\"),\n" +
+    "    null == user || \"\" == user.shopid ? setTimeout(\"checkItems()\", 1E3) : 0 == $(\".o-o-t-l-c-list\").length ? setTimeout(\"checkItems()\", 1E3) : 1 == $(\".o-o-t-l-c-list\").length && 0 < $($(\".o-o-t-l-c-list\")[0]).text().indexOf(\"没有查询到\") ? setTimeout(\"checkItems()\", 1E3) : $(\"body\").attr(\"clen\") == $(\".o-o-t-l-content\").html().length ? setTimeout(\"checkItems()\", 1E3) : ($(\"th:contains('商品ID')\").html(\"<label><input type=checkbox class=chkItem checked style='vertical-align: -2px;' />商品ID</label>\"),\n" +
     "        $(\".chkAll\").prop(\"checked\", !0), orderRows = $(\".o-o-t-l-c-list\"), orderIndex = 0, orderRows.each(function () {\n" +
     "        getOrderButton($(this))\n" +
     "    }))\n" +
@@ -214,16 +214,18 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "        f.num = 1;\n" +
     "        d.push(f);\n" +
     "        a.items = JSON.stringify(d);\n" +
-    "        a.orderId = c.find(\"li:contains('\u8ba2\u5355\u7f16\u53f7\uff1a')\").text().replace(\"\u8ba2\u5355\u7f16\u53f7\uff1a\", \"\").trim();\n" +
+    "        a.orderId = c.find(\"li:contains('订单编号：')\").text().replace(\"订单编号：\", \"\").trim();\n" +
     "        if (\"\" != a.orderId) {\n" +
     "            c.find(\"td:eq(2) em\").remove();\n" +
     "            a.status = c.find(\"td:eq(2)\").text();\n" +
-    "            a.orderDate = c.find(\"li:contains('\u6210\u56e2\u65f6\u95f4\uff1a')\").text().replace(\"\u6210\u56e2\u65f6\u95f4\uff1a\", \"\").trim();\n" +
-    "            a.orderBuyer = c.find(\"li:contains('\u6536\u8d27\u4eba:')\").text().replace(\"\u6536\u8d27\u4eba:\", \"\").trim();\n" +
+    "            a.orderDate = c.find(\"li:contains('成团时间：')\").text().replace(\"成团时间：\", \"\").trim();\n" +
+    "            a.orderBuyer = c.find(\"li:contains('收货人:')\").text().replace(\"收货人:\", \"\").trim();\n" +
     "            a.payMoney = c.find(\"td:eq(4)\").text();\n" +
     "            a.address = \"\";\n" +
     "            a.comment = \"\";\n" +
     "            null == orderList && (orderList = localStorage.orderList ? JSON.parse(localStorage.orderList) : [], null == orderList && (orderList = []));\n" +
+    "            null == skusTaoURLMapList && (skusTaoURLMapList = localStorage.skusTaoURLMapList ? JSON.parse(localStorage.skusTaoURLMapList) : [], null == skusTaoURLMapList && (skusTaoURLMapList = []));\n" +
+    "            console.log(skusTaoURLMapList);\n" +
     "            for (var e = null, d = 0; d < orderList.length; d++)\n" +
     "                if (orderList[d].OrderId == a.orderId && orderList[d].LinkMan) {\n" +
     "                    e = orderList[d];\n" +
@@ -254,7 +256,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "                        }\n" +
     "                    },\n" +
     "                    error: function () {\n" +
-    "                        showOrderInfo2(c, {skus: \"\u62fc\u591a\u591a\u670d\u52a1\u5668\u7e41\u5fd9\uff0c\u5bfc\u81f4\u65e0\u6cd5\u83b7\u53d6\u8ba2\u5355\u4fe1\u606f\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\"})\n" +
+    "                        showOrderInfo2(c, {skus: \"拼多多服务器繁忙，导致无法获取订单信息，请稍后再试\"})\n" +
     "                    }\n" +
     "                });\n" +
     "            }\n" +
@@ -265,7 +267,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "                    null != d && \"\" != d && c.find(\".o-o-t-l-c-l-tr-two\").empty().append('<a target=\"_blank\" href=\"' + f.url + '\" class=\"m-view\">' + d + \"</a>\"),\n" +
     "                        f = \"/Pdd.html#/orders/order_detail/index?Express=1&sn=\" + a.orderId,\n" +
     "                        c.find(\".z-handexpress\").remove(),\n" +
-    "                        c.find(\".o-o-t-l-c-l-tr td:last\").append('<a class=\"z-handexpress\" target=\"_blank\" href=\"' + f + '\"><br>\u624b\u5de5\u53d1\u8d27</a>')\n" +
+    "                        c.find(\".o-o-t-l-c-l-tr td:last\").append('<a class=\"z-handexpress\" target=\"_blank\" href=\"' + f + '\"><br>手工发货</a>')\n" +
     "                    // ,\n" +
     "                    //     $.ajax({\n" +
     "                    //     method: \"post\", url: serviceHost + \"/User/Service/GetOrderButton\", data: a,\n" +
@@ -292,14 +294,14 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "                    //     }, error: function () {\n" +
     "                    //         setTimeout(\"getOrderButton()\", 500)\n" +
     "                    //     }, complete: function () {\n" +
-    "                    //         $(\"span:contains('\u4fee\u6539\u5173\u8054')\").length + $(\"span:contains('\u5b9d\u8d1d\u5173\u8054')\").length >=\n" +
+    "                    //         $(\"span:contains('修改关联')\").length + $(\"span:contains('宝贝关联')\").length >=\n" +
     "                    //         orderRows.length - 1 && $(\"body\").attr(\"location\", \"\")\n" +
     "                    //     }\n" +
     "                    // })\n" +
     "                );\n" +
     "                var openUrl = null;\n" +
     "                for (var index = 0; index < skusTaoURLMapList.length; index++) {\n" +
-    "                    if (skusTaoURLMapList[index].type == e.skus && skusTaoURLMapList[index].taoUrl != null) {\n" +
+    "                    if (skusTaoURLMapList[index].type == base64Encode(e.skus) && skusTaoURLMapList[index].taoUrl != null) {\n" +
     "                        openUrl = skusTaoURLMapList[index].taoUrl;\n" +
     "                    }\n" +
     "                }\n" +
@@ -322,53 +324,44 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "\n" +
     "\n" +
     "                    a.find(\"span[data-role=link]\").click(function () {\n" +
-    "                        $(this).hide(); \n"+
-    "                        console.log(\"clicked!!!\") \n"+
+    "                        $(this).hide();\n" +
+    "                        console.log(\"clicked!!!\")\n" +
     "                        var type = $(this).attr(\"data-type\");\n" +
-    "                        type = base64Decode(type);           \n"+
     "                        var openUrl = null;\n" +
-    "                        console.log(skusTaoURLMapList) \n"+
+    "                        console.log(skusTaoURLMapList);\n" +
     "                        for (var index = 0; index < skusTaoURLMapList.length; index++) {\n" +
     "                            if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {\n" +
     "                                openUrl = skusTaoURLMapList[index].taoUrl;\n" +
     "                            }\n" +
     "                        }\n" +
     "\n" +
-    "                        console.log($(this).parents(\"table[class=pdd-dui-table]\")); \n"+
+    "                        console.log($(this).parents(\"table[class=pdd-dui-table]\"));\n" +
     "                        if (openUrl == null) {\n" +
-    "                            $(this).parents(\"table[class=pdd-dui-table]\").append(\"<ul class='ul-modify'><li><input class='input-modify' type='text' /></li><li><input data-type=\\'\" + base64Encode(type) + \"\\' class='btn-rosy url-modify' type='button' value='\u786e\u8ba4'/></li> </ul>\");\n" +
+    "                            $(this).parents(\"table[class=pdd-dui-table]\").append(\"<ul class='ul-modify'><li><input class='input-modify' type='text' /></li><li><input data-type=\\'\" + (type) + \"\\' class='btn-rosy url-modify' type='button' value='确认'/></li> </ul>\");\n" +
     "                        }\n" +
     "                        else {\n" +
-    "                            $(this).parents(\"table[class=pdd-dui-table]\").append(\"<ul class='ul-modify'><li><input class='input-modify' type='text' value=\\'\" + openUrl + \"\\'/></li> <li><input data-type=\\'\" + base64Encode(type) + \"\\' class='btn-rosy  url-modify' type='button' value='\u786e\u8ba4'/></li> </ul>\");\n" +
+    "                            $(this).parents(\"table[class=pdd-dui-table]\").append(\"<ul class='ul-modify'><li><input class='input-modify' type='text' value=\\'\" + openUrl + \"\\'/></li> <li><input data-type=\\'\" + (type) + \"\\' class='btn-rosy  url-modify' type='button' value='确认'/></li> </ul>\");\n" +
     "                        }\n" +
     "\n" +
     "                        $(this).parents(\".o-o-t-l-c-list\").find(\"input[type=button]\").click(function () {\n" +
-    "                            console.log($(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\")); \n"+
-    "                            $(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\").removeClass('btn-red').addClass('btn-white').text('修改关联'); \n"+
-    "                            $(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\").parent().append(\"<div class='btn-row'><span class='btn-white' data-url='\"+ $('.input-modify').val() +\"' data-role='order' >再次采购</span></div>\"); \n"+
-    "                            $(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\").show(); \n"+
-    "                            if(skusTaoURLMapList.length == 0)\n" +
-    "                            { \n" +
-    "                                    var type = $(this).attr(\"data-type\");\n"+
-    "                                    skusTaoURLMapList.push({type:type,taoUrl:$('.input-modify').val()});\n" +
-    "                                    $(this).parents('.ul-modify').remove();\n" +
-    "                                    return;\n"+
-    "                            }\n" +
+    "                            console.log($(this).parents(\".o-o-t-l-c-list\").find(\"span[data-role=link]\"));\n" +
+    "\n" +
+    "                            var map = null;\n" +
+    "                            var data_type = $(this).attr(\"data-type\");\n" +
     "                            for (var index = 0; index < skusTaoURLMapList.length; index++) {\n" +
-    "                                var type = $(this).attr(\"data-type\");\n" +
-    "                                var map = null;\n" +
-    "                                if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {\n" +
+    "                                if (skusTaoURLMapList[index].type == data_type) {\n" +
     "                                    map = skusTaoURLMapList[index];\n" +
     "                                }\n" +
-    "                                console.log(map);\n" +
-    "                                if(map !=null)\n" +
-    "                                    map.taoUrl = $('.input-modify').val();\n" +
-    "                                else\n" +
-    "                                    skusTaoURLMapList.push({type:type,taoUrl:$('.input-modify').val()});\n" +
-    "\n" +
     "                            }\n" +
-    "                            console.log(skusTaoURLMapList); \n"+
-    "                            $(this).parents('.ul-modify').remove();\n" +
+    "                            console.log(map);\n" +
+    "                            if (map != null)\n" +
+    "                                map.taoUrl = $('.input-modify').val();\n" +
+    "                            else\n" +
+    "                                skusTaoURLMapList.push({type: data_type, taoUrl: $('.input-modify').val()});\n" +
+    "\n" +
+    "                            console.log(skusTaoURLMapList);\n" +
+    "                            localStorage.skusTaoURLMapList = JSON.stringify(skusTaoURLMapList);\n" +
+    "                            location.reload();\n" +
     "                        });\n" +
     "\n" +
     "                    });\n" +
@@ -393,8 +386,8 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "\n" +
     "function openOrder(c) {\n" +
     "    for (var a = $(c).parent(); 0 < a.length && !a.hasClass(\"o-o-t-l-c-list\");) a = a.parent();\n" +
-    "    a.hasClass(\"o-o-t-l-c-list\") ? (a = a.find(\"li:contains('\u8ba2\u5355\u7f16\u53f7\uff1a')\").text().replace(\"\u8ba2\u5355\u7f16\u53f7\uff1a\", \"\").trim(), a = \"http://\" + location.host + \"/Pdd.html#orders/order_detail/index?OrderUrl=\" + $(c).attr(\"data-url\") + \"&sn=\" + a + \"&skumap=\" + $(c).attr(\"data-skumap\"), window.open(a), a = $(c).text(), 0 <= a.indexOf(\"\u91c7\u8d2d\u4e0b\u5355\") && ($(c).text(a.replace(\"\u91c7\u8d2d\u4e0b\u5355\",\n" +
-    "        \"\u518d\u6b21\u91c7\u8d2d\")), $(c).removeClass(\"btn-blue\").addClass(\"btn-white\"))) : alert(\"\u4e0b\u5355\u5931\u8d25\uff0c\u627e\u4e0d\u5230\u8ba2\u5355\u8282\u70b9\")\n" +
+    "    a.hasClass(\"o-o-t-l-c-list\") ? (a = a.find(\"li:contains('订单编号：')\").text().replace(\"订单编号：\", \"\").trim(), a = \"http://\" + location.host + \"/Pdd.html#orders/order_detail/index?OrderUrl=\" + $(c).attr(\"data-url\") + \"&sn=\" + a + \"&skumap=\" + $(c).attr(\"data-skumap\"), window.open(a), a = $(c).text(), 0 <= a.indexOf(\"采购下单\") && ($(c).text(a.replace(\"采购下单\",\n" +
+    "        \"再次采购\")), $(c).removeClass(\"btn-blue\").addClass(\"btn-white\"))) : alert(\"下单失败，找不到订单节点\")\n" +
     "}\n" +
     "\n" +
     "function showOrderInfo(c, a) {\n" +
@@ -422,15 +415,15 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "\n" +
     "function showOrderInfo2(c, a) {\n" +
     "    c.find(\".data-info\").remove();\n" +
-    "    var d = $('<table class=\"pdd-dui-table data-info\"><tr><td style=\" padding: 5px; font-size: 13px; \"><b>\u5546\u54c1\u89c4\u683c\uff1a</b>' + a.skus + \"<br><b>\u6536\u8d27\u4fe1\u606f\uff1a</b>\" + a.LinkMan + \"\uff0c\" + a.Phone + \"\uff0c\" + a.Address + '<br><b>\u91c7\u8d2d\u5907\u6ce8\uff1a</b><span class=\"buyerMessage\">' + a.Buyer + \"</span></td></tr></table>\");\n" +
+    "    var d = $('<table class=\"pdd-dui-table data-info\"><tr><td style=\" padding: 5px; font-size: 13px; \"><b>商品规格：</b>' + a.skus + \"<br><b>收货信息：</b>\" + a.LinkMan + \"，\" + a.Phone + \"，\" + a.Address + '<br><b>采购备注：</b><span class=\"buyerMessage\">' + a.Buyer + \"</span></td></tr></table>\");\n" +
     "    c.append(d);\n" +
     "    for (var b = 0; b < orderList.length && orderList[b].OrderId != a.OrderId; b++) orderList[b].Phone == a.Phone &&\n" +
-    "    (d.find(\"td\").css(\"color\", \"#A00E0E\"), d.attr(\"title\", \"\u91cd\u590d\u8d2d\u4e70\uff1a\" + orderList[b].OrderId + \"\uff0c\" + orderList[b].Buyer));\n" +
+    "    (d.find(\"td\").css(\"color\", \"#A00E0E\"), d.attr(\"title\", \"重复购买：\" + orderList[b].OrderId + \"，\" + orderList[b].Buyer));\n" +
     "    void 0 != a.Buyer && null != a.Buyer && \"\" != a.Buyer || 0 != c.find(\".btn-blue\").length || $.get(\"http://\" + location.host + \"/orders/note/\" + a.OrderId, {}, function (b) {\n" +
     "        if (b.result) {\n" +
     "            b = b.data;\n" +
     "            var d = /\\d{15,}/;\n" +
-    "            if (void 0 != b.length) for (var e = 0; e < b.length; e++) if (void 0 != b[e].note && null != b[e].note && !(0 < b[e].note.indexOf(\"\u5feb\u9012\u5355\u53f7\")) && d.test(b[e].note)) {\n" +
+    "            if (void 0 != b.length) for (var e = 0; e < b.length; e++) if (void 0 != b[e].note && null != b[e].note && !(0 < b[e].note.indexOf(\"快递单号\")) && d.test(b[e].note)) {\n" +
     "                a.Buyer = b[e].note;\n" +
     "                localStorage.orderList =\n" +
     "                    JSON.stringify(orderList);\n" +
@@ -443,34 +436,34 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "\n" +
     "function batchSubmit() {\n" +
     "    if (!(0 < $(\".batchsubmit\").length)) {\n" +
-    "        var c = $('<span class=\"btn-black batchsubmit\" style=\" width: 80px; line-height: 20px; display: inline-block; text-align: center; margin: 0 10px 0 10px;\">\u6279\u91cf\u53d1\u8d27</span>');\n" +
-    "        $(\"a:contains('\u6279\u91cf\u5bfc\u51fa')\").parent().append(c);\n" +
+    "        var c = $('<span class=\"btn-black batchsubmit\" style=\" width: 80px; line-height: 20px; display: inline-block; text-align: center; margin: 0 10px 0 10px;\">批量发货</span>');\n" +
+    "        $(\"a:contains('批量导出')\").parent().append(c);\n" +
     "        c.click(function () {\n" +
     "            failCount = successCount = 0;\n" +
     "            $.ajaxSetup({async: !1});\n" +
-    "            $(\"a:contains('\u91c7\u8d2d\u53d1\u8d27'):visible\").each(function () {\n" +
+    "            $(\"a:contains('采购发货'):visible\").each(function () {\n" +
     "                var a = $(this).attr(\"href\"), c = $(this).parents(\"table\").find(\".chkItem\");\n" +
     "                if (!(0 < c.length && 0 == c.prop(\"checked\"))) {\n" +
     "                    var c = a.indexOf(\"?OrderId=\"), b = a.substring(c), b = decodeURIComponent(b) + \"&\",\n" +
     "                        a = getSubstring(b, \"OrderId=\", \"&\"), c = getSubstring(b, \"ExpressId=\", \"&\"),\n" +
     "                        b = getSubstring(b, \"ExpressName=\", \"&\");\n" +
     "                    if (\"\" != $.trim(b)) {\n" +
-    "                        if (\"\u4e2d\u56fd\u90ae\u653f\" == b || \"\u90ae\u653f\u56fd\u5185\u5c0f\u5305\" == b) b = \"\u90ae\u653f\u5feb\u9012\u5305\u88f9\";\n" +
-    "                        if (0 <= b.indexOf(\"ems\") || 0 <= b.indexOf(\"EMS\")) b = \"\u90ae\u653fEMS\";\n" +
-    "                        \"OTHER\" == b && (b = \"\u5b89\u80fd\u7269\u6d41\");\n" +
-    "                        b = b.replace(\"\u901f\u9012\", \"\u5feb\u9012\").replace(\"\u901f\u8fd0\",\n" +
-    "                            \"\u5feb\u9012\").replace(\"\u5feb\u8fd0\", \"\u5feb\u9012\");\n" +
+    "                        if (\"中国邮政\" == b || \"邮政国内小包\" == b) b = \"邮政快递包裹\";\n" +
+    "                        if (0 <= b.indexOf(\"ems\") || 0 <= b.indexOf(\"EMS\")) b = \"邮政EMS\";\n" +
+    "                        \"OTHER\" == b && (b = \"安能物流\");\n" +
+    "                        b = b.replace(\"速递\", \"快递\").replace(\"速运\",\n" +
+    "                            \"快递\").replace(\"快运\", \"快递\");\n" +
     "                        autoSubmit(a, b, c);\n" +
     "                        $(this).hide()\n" +
     "                    }\n" +
     "                }\n" +
     "            });\n" +
     "            $.ajaxSetup({async: !0});\n" +
-    "            alert(\"\u53d1\u8d27\u5b8c\u6210\uff0c\u6210\u529f\uff1a\" + successCount + \"\uff0c\u5931\u8d25\uff1a\" + failCount)\n" +
+    "            alert(\"发货完成，成功：\" + successCount + \"，失败：\" + failCount)\n" +
     "        });\n" +
     "        $(\".o-o-t-l-content\").append(c.clone(!0));\n" +
-    "        c = $(\"<label><input type=checkbox class=chkAll checked />\u5168\u9009</label>\");\n" +
-    "        $(\"a:contains('\u6279\u91cf\u5bfc\u51fa')\").parent().append(c);\n" +
+    "        c = $(\"<label><input type=checkbox class=chkAll checked />全选</label>\");\n" +
+    "        $(\"a:contains('批量导出')\").parent().append(c);\n" +
     "        c.find(\"input\").click(function () {\n" +
     "            $(this).is(\":checked\") ? $(\".chkItem\").prop(\"checked\", !0) : $(\".chkItem\").removeAttr(\"checked\")\n" +
     "        })\n" +
@@ -503,18 +496,18 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "    if (\"setOrder\" == c.type) {\n" +
     "        var b = $(\"#orderRemark_\" + c.orderid), g = $(\"#remark_\" + c.orderid);\n" +
     "        a = c.comment;\n" +
-    "        \"\" != b.text() && (a = b.text() + \"\uff0c\" + a);\n" +
-    "        0 < g.length ? g[0].click() : alert(\"\u627e\u4e0d\u5230\u6dfb\u52a0\u5907\u6ce8\u6309\u94ae\");\n" +
+    "        \"\" != b.text() && (a = b.text() + \"，\" + a);\n" +
+    "        0 < g.length ? g[0].click() : alert(\"找不到添加备注按钮\");\n" +
     "        b = $(\"#remarkArea\");\n" +
     "        if (0 < b.length) {\n" +
     "            if (b.val() == a) {\n" +
-    "                console.log(\"\u91cd\u590d\u5907\u6ce8\");\n" +
+    "                console.log(\"重复备注\");\n" +
     "                return\n" +
     "            }\n" +
     "            b.val(a);\n" +
     "            $(\"#orderRemarkOrderId\").val(c.orderid);\n" +
     "            $(\"#rSubmitButton\").click()\n" +
-    "        } else return console.log(\"\u627e\u4e0d\u5230\u5907\u6ce8\u8f93\u5165\u6846\"), d(!1);\n" +
+    "        } else return console.log(\"找不到备注输入框\"), d(!1);\n" +
     "        a = serviceHost + \"/User/Service/SaveBuyOrderInfo\";\n" +
     "        c = {orderId: c.orderid, buyOrderId: c.buyOrderId, buyAccount: unescape(c.buyAccount)};\n" +
     "        chrome.extension.sendRequest({type: \"ajax\", url: a, data: c}, function (a) {\n" +
@@ -522,4 +515,4 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "        });\n" +
     "        return d(!0)\n" +
     "    }\n" +
-    "});\n";
+    "});";

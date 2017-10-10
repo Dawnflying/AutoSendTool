@@ -181,6 +181,7 @@ function addJsFiles(a, d, b) {
 }
 
 function addJSFiles(a, d, b) {
+    console.log("addJSFiles:" + a);
     var c = a;
     if (0 < a.indexOf("mms.yangkeduo.com") || 0 < a.indexOf("mms.pinduoduo.com"))
         (b = c.indexOf("#"), -1 != b && (c = c.substring(b)));
@@ -191,26 +192,26 @@ function addJSFiles(a, d, b) {
         1 != waitForInsert[c] && (waitForInsert[c] = !0, executePageDirect(fileBuffer[c], d), waitForInsert[c] = !1);
     else {
         if (0 <= a.indexOf("http://mms.pinduoduo.com/Pdd.html#/orders/search/index")) {
-            var script = scriptPinDuoDuoSample;
+            var script1 = scriptPinDuoDuoSample;
             console.log("scriptPinDuoDuoSample");
-            executePageDirect(script, d);
-            fileBuffer[c] = script;
+            executePageDirect(script1, d);
+            fileBuffer[c] = script1;
             waitForInsert[c] = !1;
         }
 
         if (0 <= a.indexOf("http://mms.pinduoduo.com/Pdd.html#/orders/order_detail/index")) {
-            var script = scriptPinDuoDuoDetail;
+            var script2 = scriptPinDuoDuoDetail;
             console.log("scriptPinDuoDuoDetail");
-            executePageDirect(script, d);
-            fileBuffer[c] = script;
+            executePageDirect(script2, d);
+            fileBuffer[c] = script2;
             waitForInsert[c] = !1;
         }
 
         if (0 <= a.indexOf("https://item.taobao.com/item.htm")) {
-            var script = scriptTaobao;
+            var script3 = scriptTaobao;
             console.log("scriptTaobao");
-            executePageDirect(script, d);
-            fileBuffer[c] = script;
+            executePageDirect(script3, d);
+            fileBuffer[c] = script3;
             waitForInsert[c] = !1;
         }
     }
@@ -232,7 +233,7 @@ function executePage(a, d) {
 }
 
 function executePageDirect(a,d){
-    console.log("executePageDirect");
+    console.log(a);
     chrome.tabs.executeScript(d, {code: a, allFrames: !0}, function (a) {
     });
 }

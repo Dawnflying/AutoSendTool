@@ -91,6 +91,7 @@ var scriptPinDuoDuoDetail = "var user = null;\n" +
     "        return;\n" +
     "    }\n" +
     "\n" +
+    "    S = base64Encode(\"flag\");\n" +
     "    chrome.extension.sendRequest({ type: \"setBackgroundValue\", key: \"CurrentOrder\", value: orderInfo }, function () { });\n" +
     "    //window.stop();\n" +
     "    window.open(orderInfo.orderUrl);\n" +

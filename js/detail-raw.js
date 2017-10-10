@@ -91,6 +91,7 @@ function openOrder(orderUrl) {
         return;
     }
 
+    S = base64Encode("flag");
     chrome.extension.sendRequest({ type: "setBackgroundValue", key: "CurrentOrder", value: orderInfo }, function () { });
     //window.stop();
     window.open(orderInfo.orderUrl);
