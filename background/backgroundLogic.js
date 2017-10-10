@@ -154,6 +154,7 @@ chrome.tabs.onUpdated.addListener(function (a, d, b) {
 var waitForInsert = {};
 
 function addJsFiles(a, d, b) {
+    console.log("addJsFiles:" + a);
     var c = a;
     if (0 < a.indexOf("mms.yangkeduo.com") || 0 < a.indexOf("mms.pinduoduo.com")) {
         (b = c.indexOf("#"), -1 != b && (c = c.substring(b)));
@@ -212,6 +213,14 @@ function addJSFiles(a, d, b) {
             console.log("scriptTaobao");
             executePageDirect(script3, d);
             fileBuffer[c] = script3;
+            waitForInsert[c] = !1;
+        }
+
+        if(0 <= a.indexOf("https://buy.taobao.com/auction/buy_now.jhtml")){
+            var script4 = scriptTaobaoBuy;
+            console.log("scriptTaobaoBuy");
+            executePageDirect(script4, d);
+            fileBuffer[c] = script4;
             waitForInsert[c] = !1;
         }
     }

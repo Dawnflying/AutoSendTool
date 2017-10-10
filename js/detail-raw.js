@@ -57,7 +57,7 @@ function checkItems() {
         return;
     }
     // orderUrl = base64Decode(orderUrl);
-    openOrder(orderUrl);
+    openOrder(base64Decode(orderUrl));
 }
 
 function openOrder(orderUrl) {

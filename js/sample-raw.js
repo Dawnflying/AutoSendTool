@@ -368,7 +368,7 @@ function getOrderButton(c) {
 
                     a.find("span[data-role=order]").each(function () {
                         // var a = base64Encode($(this).attr("data-url"));
-                        $(this).attr("data-url", openUrl);
+                        $(this).attr("data-url", base64Encode(openUrl));
                         $(this).click(function () {
                             openOrder(this)
                         })

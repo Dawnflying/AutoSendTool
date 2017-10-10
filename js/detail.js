@@ -57,7 +57,7 @@ var scriptPinDuoDuoDetail = "var user = null;\n" +
     "        return;\n" +
     "    }\n" +
     "    // orderUrl = base64Decode(orderUrl);\n" +
-    "    openOrder(orderUrl);\n" +
+    "    openOrder(base64Decode(orderUrl));\n" +
     "}\n" +
     "\n" +
     "function openOrder(orderUrl) {\n" +

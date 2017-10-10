@@ -368,7 +368,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "\n" +
     "                    a.find(\"span[data-role=order]\").each(function () {\n" +
     "                        // var a = base64Encode($(this).attr(\"data-url\"));\n" +
-    "                        $(this).attr(\"data-url\", openUrl);\n" +
+    "                        $(this).attr(\"data-url\", base64Encode(openUrl));\n" +
     "                        $(this).click(function () {\n" +
     "                            openOrder(this)\n" +
     "                        })\n" +
