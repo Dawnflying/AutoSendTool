@@ -22,6 +22,7 @@
         "tabs",
         "cookies",
         "storage",
+        "*://*.feixiongzhushou.com/*",
         "*://localhost/*",
         "*://*.taobao.com/*", 
         "*://*.1688.com/*", 
