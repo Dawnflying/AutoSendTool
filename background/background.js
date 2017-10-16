@@ -1,4 +1,4 @@
-﻿var backGroundJson = {URL: "http://www.mozhushou.com/User/Service/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},
+﻿var backGroundJson = {URL: "http://localhost:8089/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},
     listenTab = {};
 chrome.extension.onRequest.addListener(function (a, c, b) {
     "sendMsg" == a.type ?

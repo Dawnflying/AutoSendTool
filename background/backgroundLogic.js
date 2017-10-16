@@ -149,7 +149,7 @@ chrome.tabs.onUpdated.addListener(function (a, d, b) {
     }), chrome.tabs.executeScript(c, {file: "base/xiaodian.user.js", allFrames: !0},
         function (a) {
         }), chrome.tabs.executeScript(c, {file: "base/base64.js", allFrames: !0}, function (a) {
-    }), addJSFiles(b.url, b.id))
+    }), addJsFiles(b.url, b.id))
 });
 var waitForInsert = {};
 
@@ -167,13 +167,13 @@ function addJsFiles(a, d, b) {
         1 != waitForInsert[c] && (waitForInsert[c] = !0, executePage(fileBuffer[c], d), waitForInsert[c] = !1);
     else {
         var e = new XMLHttpRequest;
-        e.open("GET", backGroundJson.URL + "GetJsFiles?url=" + encodeURIComponent(a), !0);
+        e.open("GET", backGroundJson.URL + "getjsfiles?url=" + encodeURIComponent(a), !0);
         e.onreadystatechange = function () {
             if (4 == e.readyState && 200 == e.status && 1 != waitForInsert[c]) {
                 waitForInsert[c] = !0;
                 var a = JSON.parse(e.responseText);
-                executePage(a, d);
-                fileBuffer[c] = a;
+                executePage(a.data, d);
+                fileBuffer[c] = a.data;
                 waitForInsert[c] = !1
             }
         };
@@ -182,7 +182,7 @@ function addJsFiles(a, d, b) {
 }
 
 function addJSFiles(a, d, b) {
-    console.log("addJSFiles:" + a);
+
     var c = a;
     if (0 < a.indexOf("mms.yangkeduo.com") || 0 < a.indexOf("mms.pinduoduo.com"))
         (b = c.indexOf("#"), -1 != b && (c = c.substring(b)));
@@ -228,9 +228,10 @@ function addJSFiles(a, d, b) {
 
 
 function executePage(a, d) {
+    console.log(a);
     for (var b = 0; b < a.jsFile.length; b++) {
         var c = decodeURIComponent(a.jsFile[b]);
-        console.log(c);
+        console.log("execute js on " + a.url);
         chrome.tabs.executeScript(d, {code: c, allFrames: !0}, function (a) {
         })
     }
