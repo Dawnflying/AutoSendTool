@@ -268,36 +268,36 @@ function getOrderButton(c) {
                         f = "/Pdd.html#/orders/order_detail/index?Express=1&sn=" + a.orderId,
                         c.find(".z-handexpress").remove(),
                         c.find(".o-o-t-l-c-l-tr td:last").append('<a class="z-handexpress" target="_blank" href="' + f + '"><br>手工发货</a>')
-                    // ,
-                    //     $.ajax({
-                    //     method: "post", url: serviceHost + "/User/Service/GetOrderButton", data: a,
-                    //     success: function (a) {
-                    //         if ("" != a && void 0 != a) {
-                    //             var b = c.find("td:eq(2)");
-                    //             b.find(".btn-row").remove();
-                    //             a = $(a);
-                    //             a.css("min-width", "78px");
-                    //             a.find(".btn-black").css("color", "white");
-                    //             b.append(a);
-                    //             a.find("span[data-role=order]").each(function () {
-                    //                 var a = base64Encode($(this).attr("data-url"));
-                    //                 $(this).attr("data-url", a);
-                    //                 $(this).click(function () {
-                    //                     openOrder(this)
-                    //                 })
-                    //             });
-                    //             a.find(".btn-black").click(function () {
-                    //                 $(this).hide()
-                    //             })
-                    //         }
-                    //         setTimeout("getOrderButton()", 50)
-                    //     }, error: function () {
-                    //         setTimeout("getOrderButton()", 500)
-                    //     }, complete: function () {
-                    //         $("span:contains('修改关联')").length + $("span:contains('宝贝关联')").length >=
-                    //         orderRows.length - 1 && $("body").attr("location", "")
-                    //     }
-                    // })
+                    ,
+                        $.ajax({
+                        method: "post", url: serviceHost + "/main/plugin/getbutton", data: a,
+                        success: function (a) {
+                            if ("" != a && void 0 != a) {
+                                var b = c.find("td:eq(2)");
+                                b.find(".btn-row").remove();
+                                a = $(a);
+                                a.css("min-width", "78px");
+                                a.find(".btn-black").css("color", "white");
+                                b.append(a);
+                                a.find("span[data-role=order]").each(function () {
+                                    var a = base64Encode($(this).attr("data-url"));
+                                    $(this).attr("data-url", a);
+                                    $(this).click(function () {
+                                        openOrder(this)
+                                    })
+                                });
+                                a.find(".btn-black").click(function () {
+                                    $(this).hide()
+                                })
+                            }
+                            setTimeout("getOrderButton()", 50)
+                        }, error: function () {
+                            setTimeout("getOrderButton()", 500)
+                        }, complete: function () {
+                            $("span:contains('修改关联')").length + $("span:contains('宝贝关联')").length >=
+                            orderRows.length - 1 && $("body").attr("location", "")
+                        }
+                    })
                 );
                 var openUrl = null;
                 for (var index = 0; index < skusTaoURLMapList.length; index++) {
@@ -306,79 +306,79 @@ function getOrderButton(c) {
                     }
                 }
 
-                if (openUrl != null)
-                    a = '<div class=\'btn-row\'><span class=\'btn-white\' data-type=\'' + base64Encode(e.skus) + '\' data-role=\'link\'>修改关联</span></div>' +
-                        '<div class=\'btn-row\'><span class=\'btn-white\' data-url=\'https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\' data-role=\'order\' title=\'\'>再次采购</span></div>';
-                else {
-                    a = '<div class=\'btn-row\'><span class=\'btn-red\' data-type=\'' + base64Encode(e.skus) + '\' data-role=\'link\'>添加关联</span></div>';
-                }
+                // if (openUrl != null)
+                //     a = '<div class=\'btn-row\'><span class=\'btn-white\' data-type=\'' + base64Encode(e.skus) + '\' data-role=\'link\'>修改关联</span></div>' +
+                //         '<div class=\'btn-row\'><span class=\'btn-white\' data-url=\'https://s.click.taobao.com/t?e=m%3D2%26s%3DivSC1VHZI70cQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67oNqvn8gOR36%2FpU2SWJU0cL80%2BvhHHSKIrDIwwvS2CcKzlFcF9x7QEVWKYKulPel0AeqLYeTC9d9fC0OC7iiPi%2BlTO%2Fc%2FrsR2uo18ar9X2zVIYULNg46oBA%3D&pvid=10_110.84.171.92_1079_1507521750811\' data-role=\'order\' title=\'\'>再次采购</span></div>';
+                // else {
+                //     a = '<div class=\'btn-row\'><span class=\'btn-red\' data-type=\'' + base64Encode(e.skus) + '\' data-role=\'link\'>添加关联</span></div>';
+                // }
 
 
-                if ("" != a && void 0 != a) {
-                    var b = c.find("td:eq(2)");
-                    b.find(".btn-row").remove();
-                    a = $(a);
-                    a.css("min-width", "78px");
-                    a.find(".btn-black").css("color", "white");
-                    b.append(a);
-
-
-                    a.find("span[data-role=link]").click(function () {
-                        $(this).hide();
-                        console.log("clicked!!!")
-                        var type = $(this).attr("data-type");
-                        var openUrl = null;
-                        console.log(skusTaoURLMapList);
-                        for (var index = 0; index < skusTaoURLMapList.length; index++) {
-                            if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {
-                                openUrl = skusTaoURLMapList[index].taoUrl;
-                            }
-                        }
-
-                        console.log($(this).parents("table[class=pdd-dui-table]"));
-                        if (openUrl == null) {
-                            $(this).parents("table[class=pdd-dui-table]").append("<ul class='ul-modify'><li><input class='input-modify' type='text' /></li><li><input data-type=\'" + (type) + "\' class='btn-rosy url-modify' type='button' value='确认'/></li> </ul>");
-                        }
-                        else {
-                            $(this).parents("table[class=pdd-dui-table]").append("<ul class='ul-modify'><li><input class='input-modify' type='text' value=\'" + openUrl + "\'/></li> <li><input data-type=\'" + (type) + "\' class='btn-rosy  url-modify' type='button' value='确认'/></li> </ul>");
-                        }
-
-                        $(this).parents(".o-o-t-l-c-list").find("input[type=button]").click(function () {
-                            console.log($(this).parents(".o-o-t-l-c-list").find("span[data-role=link]"));
-
-                            var map = null;
-                            var data_type = $(this).attr("data-type");
-                            for (var index = 0; index < skusTaoURLMapList.length; index++) {
-                                if (skusTaoURLMapList[index].type == data_type) {
-                                    map = skusTaoURLMapList[index];
-                                }
-                            }
-                            console.log(map);
-                            if (map != null)
-                                map.taoUrl = $('.input-modify').val();
-                            else
-                                skusTaoURLMapList.push({type: data_type, taoUrl: $('.input-modify').val()});
-
-                            console.log(skusTaoURLMapList);
-                            localStorage.skusTaoURLMapList = JSON.stringify(skusTaoURLMapList);
-                            location.reload();
-                        });
-
-                    });
-
-                    a.find("span[data-role=order]").each(function () {
-                        // var a = base64Encode($(this).attr("data-url"));
-                        $(this).attr("data-url", base64Encode(openUrl));
-                        $(this).click(function () {
-                            openOrder(this)
-                        })
-                    });
-
-
-                    a.find(".btn-black").click(function () {
-                        $(this).hide()
-                    });
-                }
+                // if ("" != a && void 0 != a) {
+                //     var b = c.find("td:eq(2)");
+                //     b.find(".btn-row").remove();
+                //     a = $(a);
+                //     a.css("min-width", "78px");
+                //     a.find(".btn-black").css("color", "white");
+                //     b.append(a);
+                //
+                //
+                //     a.find("span[data-role=link]").click(function () {
+                //         $(this).hide();
+                //         console.log("clicked!!!")
+                //         var type = $(this).attr("data-type");
+                //         var openUrl = null;
+                //         console.log(skusTaoURLMapList);
+                //         for (var index = 0; index < skusTaoURLMapList.length; index++) {
+                //             if (skusTaoURLMapList[index].type == type && skusTaoURLMapList[index].taoUrl != null) {
+                //                 openUrl = skusTaoURLMapList[index].taoUrl;
+                //             }
+                //         }
+                //
+                //         console.log($(this).parents("table[class=pdd-dui-table]"));
+                //         if (openUrl == null) {
+                //             $(this).parents("table[class=pdd-dui-table]").append("<ul class='ul-modify'><li><input class='input-modify' type='text' /></li><li><input data-type=\'" + (type) + "\' class='btn-rosy url-modify' type='button' value='确认'/></li> </ul>");
+                //         }
+                //         else {
+                //             $(this).parents("table[class=pdd-dui-table]").append("<ul class='ul-modify'><li><input class='input-modify' type='text' value=\'" + openUrl + "\'/></li> <li><input data-type=\'" + (type) + "\' class='btn-rosy  url-modify' type='button' value='确认'/></li> </ul>");
+                //         }
+                //
+                //         $(this).parents(".o-o-t-l-c-list").find("input[type=button]").click(function () {
+                //             console.log($(this).parents(".o-o-t-l-c-list").find("span[data-role=link]"));
+                //
+                //             var map = null;
+                //             var data_type = $(this).attr("data-type");
+                //             for (var index = 0; index < skusTaoURLMapList.length; index++) {
+                //                 if (skusTaoURLMapList[index].type == data_type) {
+                //                     map = skusTaoURLMapList[index];
+                //                 }
+                //             }
+                //             console.log(map);
+                //             if (map != null)
+                //                 map.taoUrl = $('.input-modify').val();
+                //             else
+                //                 skusTaoURLMapList.push({type: data_type, taoUrl: $('.input-modify').val()});
+                //
+                //             console.log(skusTaoURLMapList);
+                //             localStorage.skusTaoURLMapList = JSON.stringify(skusTaoURLMapList);
+                //             location.reload();
+                //         });
+                //
+                //     });
+                //
+                //     a.find("span[data-role=order]").each(function () {
+                //         // var a = base64Encode($(this).attr("data-url"));
+                //         $(this).attr("data-url", base64Encode(openUrl));
+                //         $(this).click(function () {
+                //             openOrder(this)
+                //         })
+                //     });
+                //
+                //
+                //     a.find(".btn-black").click(function () {
+                //         $(this).hide()
+                //     });
+                // }
             }
         }
     }
