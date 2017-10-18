@@ -1,6 +1,6 @@
 ﻿var version = "1.6.0";
-// var serviceHost = "http://www..feixiongzhushou.com:8088";
-var serviceHost = "http://localhost:8089";
+ var serviceHost = "http://www.feixiongzhushou.com";
+//var serviceHost = "http://localhost:8089";
 chrome.extension.onRequest.addListener(function (a, b, c) {
     if ("getUserNick" == a.type) return a = getUserInfo(), c(a)
 });

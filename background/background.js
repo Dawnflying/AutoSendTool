@@ -1,5 +1,5 @@
-﻿// var backGroundJson = {URL: "http://www.feixiongzhushou.com:8088/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},listenTab = {};
-var backGroundJson = {URL: "http://localhost:8089/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},listenTab = {};
+﻿ var backGroundJson = {URL: "http://www.feixiongzhushou.com/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},listenTab = {};
+//var backGroundJson = {URL: "http://localhost:8089/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},listenTab = {};
 chrome.extension.onRequest.addListener(function (a, c, b) {
     "sendMsg" == a.type ?
         sendMsg(a, c, b) :

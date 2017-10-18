@@ -272,6 +272,7 @@ function getOrderButton(c) {
                         $.ajax({
                         method: "post", url: serviceHost + "/main/plugin/getbutton", data: a,
                         success: function (a) {
+                            console.log(a);
                             if ("" != a && void 0 != a) {
                                 var b = c.find("td:eq(2)");
                                 b.find(".btn-row").remove();
