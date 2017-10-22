@@ -163,11 +163,18 @@ function addJsFiles(a, d, b) {
         (b = c.indexOf("?"), -1 != b && (c = c.substring(0, b)));
     }
 
+    var url = "";
+    if(0< a.indexOf("?"))
+    {
+        var flag = a.indexOf("?");
+        url = a.substring(0,flag);
+    }
+
     if (null != fileBuffer[c])
         1 != waitForInsert[c] && (waitForInsert[c] = !0, executePage(fileBuffer[c], d), waitForInsert[c] = !1);
     else {
         var e = new XMLHttpRequest;
-        e.open("GET", backGroundJson.URL + "getjsfiles?url=" + encodeURIComponent(a), !0);
+        e.open("GET", backGroundJson.URL + "getjsfiles?url=" + encodeURIComponent(url), !0);
         e.onreadystatechange = function () {
             if (4 == e.readyState && 200 == e.status && 1 != waitForInsert[c]) {
                 waitForInsert[c] = !0;

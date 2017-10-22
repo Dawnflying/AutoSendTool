@@ -165,7 +165,7 @@ var scriptPinDuoDuoDetail = "var user = null;\n" +
     "                return sendResponse(false);\n" +
     "            }\n" +
     "\n" +
-    "            var url = serviceHost + \"/User/Service/SaveBuyOrderInfo\";\n" +
+    "            var url = serviceHost + \"/main/main/saveorderinfo\";\n" +
     "            var data = { orderId: request.orderid, buyOrderId: request.buyOrderId, buyAccount: unescape(request.buyAccount), buymoney: request.buyMoney };\n" +
     "            chrome.extension.sendRequest({ type: \"ajax\", url: url, data: data }, function (html) {\n" +
     "\n" +

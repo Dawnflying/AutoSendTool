@@ -508,7 +508,7 @@ var scriptPinDuoDuoSample = "var user = null, tabid = null, orderList = null, sk
     "            $(\"#orderRemarkOrderId\").val(c.orderid);\n" +
     "            $(\"#rSubmitButton\").click()\n" +
     "        } else return console.log(\"找不到备注输入框\"), d(!1);\n" +
-    "        a = serviceHost + \"/User/Service/SaveBuyOrderInfo\";\n" +
+    "        a = serviceHost + \"/main/main/saveorderinfo\";\n" +
     "        c = {orderId: c.orderid, buyOrderId: c.buyOrderId, buyAccount: unescape(c.buyAccount)};\n" +
     "        chrome.extension.sendRequest({type: \"ajax\", url: a, data: c}, function (a) {\n" +
     "            console.log(a)\n" +

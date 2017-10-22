@@ -509,7 +509,7 @@ chrome.extension.onRequest.addListener(function (c, a, d) {
             $("#orderRemarkOrderId").val(c.orderid);
             $("#rSubmitButton").click()
         } else return console.log("找不到备注输入框"), d(!1);
-        a = serviceHost + "/User/Service/SaveBuyOrderInfo";
+        a = serviceHost + "/main/main/saveorderinfo";
         c = {orderId: c.orderid, buyOrderId: c.buyOrderId, buyAccount: unescape(c.buyAccount)};
         chrome.extension.sendRequest({type: "ajax", url: a, data: c}, function (a) {
             console.log(a)
