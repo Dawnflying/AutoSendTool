@@ -69,7 +69,7 @@ function JsonParamsToUrl(data){
 }
 
 var version = chrome.runtime.getManifest().version;
-var serviceHost = "http://www.jisuxiadan.com";
+var serviceHost = "http://www.feixiongzhushou.com";
 
 function getUserInfo() {
     if (location.href.indexOf(".jd.com") > 0) {

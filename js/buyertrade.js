@@ -1,7 +1,7 @@
 !function () {
-    function g() {
+    function init() {
         var c, d;
-        return "undefined" == typeof $ ? (setTimeout(g, 500), void 0) : ($("body").hasClass("loaded") || ($("body").addClass("loaded"), c = $("<span class='btn-update' style='border: 1px solid #1E8AB3; background-color: #EAF8FF; padding: 5px; margin-right: 5px;'>更新发货信息</span>"), d = $("<span class='btn-blue btn-batch'>启用自动翻15页</span>"), $("[class^='batch-mod__container']").append(c), $("[class^='batch-mod__container']").append(d), $(".btn-batch").click(function () {
+        return "undefined" == typeof $ ? (setTimeout(init, 500), void 0) : ($("body").hasClass("loaded") || ($("body").addClass("loaded"), c = $("<span class='btn-update' style='border: 1px solid #1E8AB3; background-color: #EAF8FF; padding: 5px; margin-right: 5px;'>更新发货信息</span>"), d = $("<span class='btn-blue btn-batch'>启用自动翻15页</span>"), $("[class^='batch-mod__container']").append(c), $("[class^='batch-mod__container']").append(d), $(".btn-batch").click(function () {
             var a = parseInt(localStorage.AutoPageCount);
             if (0 / 0 != a && a > 0) {
                 if (0 == confirm("正在翻页，是否停止")) return !1;
@@ -20,6 +20,7 @@
 
     function h() {
         var g, j;
+        console.log("exec : h");
         if (a = $("div[data-id]"), 0 == a.length) return setTimeout(h, 1e3), void 0;
         if (g = $("[class^='loading-mod__loading']"), j = g.attr("class"), -1 == j.indexOf("hidden")) return setTimeout(h, 1e3), void 0;
         for (b = 0, e = !1, f = 0, d = localStorage.orderAddrs ? JSON.parse(localStorage.orderAddrs) : [], null == d && (d = []); d.length > 3e3;) d.splice(0, 1);
@@ -28,6 +29,7 @@
 
     function i() {
         var e, g, h, m, n, o;
+        console.log("exec : i");
         if (0 == a.length && null == d) return console.log("首次加载重置"), q(), void 0;
         if (b >= a.length) return $("body").removeClass("loaded"), $(".btn-update").text("更新完成,发现" + f + "条新发货信息)"), e = parseInt(localStorage.AutoPageCount), 0 / 0 != e && e > 0 ? (e--, localStorage.AutoPageCount = e, $("button:contains('下一页')")[0].click(), $(".btn-batch").text("停止自动翻页" + e)) : $(".btn-batch").text("启用自动翻15页"), void 0;
         for (g = $(a[b]), g.find(".order-addr").remove(), h = g.attr("data-id"), b++, $(".btn-update").text("更新发货信息(" + b + "/" + a.length + ")"), m = g.find("#confirmGood").length > 0, n = d.length - 1; n >= 0; n--) if (d[n].OrderId == h) {
@@ -44,10 +46,11 @@
             ExpressName: "",
             Price: 0,
             PostFee: 0
-        }), setTimeout(i, 50), void 0) : (o.indexOf("tmall.com") > 0 ? k(g, h) : j(g, h), void 0)
+        }), setTimeout(i, 50), void 0) : (o.indexOf("tmall.com") > 0 ? express2(g, h) : express1(g, h), void 0)
     }
 
-    function j(a, b) {
+    function express1(a, b) {
+        console.log("exec : j");
         var f = a.find("span:contains('(含运费：')").parent().prev().find("strong").text().replace("￥", ""),
             g = a.find("span:contains('(含运费：')").next().text().replace("￥", ""),
             h = a.find("a:contains('订单详情')").attr("href"), j = {
@@ -105,7 +108,8 @@
         })
     }
 
-    function k(a, b) {
+    function express2(a, b) {
+        console.log("exec : k");
         var d = a.find("span:contains('(含运费：')").parent().prev().find("strong").text().replace("￥", ""),
             f = a.find("span:contains('(含运费：')").next().text().replace("￥", ""),
             g = a.find("a:contains('订单详情')").attr("href"), h = {
@@ -151,6 +155,7 @@
 
     function l(a, b, c) {
         var f, g;
+        console.log("exec : l");
         for (a.attr("data-id"), f = $("<div class='order-addr' style='border:1px solid blue;'>" + b.Linkman + "，" + b.Phone + "，" + b.Address + "</div>"), a.append(f), "" != b.ExpressId && f.html(f.html() + "<br><b>快递公司：</b>" + b.ExpressName + "，<b>快递单号：</b>" + b.ExpressId), 1 == b.AddrError && f.html(f.html() + "<br><span style='color:red;'>订单收货地址异常</span>"), g = 0; g < d.length; g++) if (d[g].OrderId != b.OrderId && d[g].Phone == b.Phone) {
             f.attr("style", "border:1px solid red; background-color: rgb(247, 236, 229);"), f.html(f.html() + "<br><strong>有相同地址订单号：" + d[g].OrderId + "</strong>");
             break
@@ -159,6 +164,7 @@
     }
 
     function m(a, b) {
+        console.log("exec : m");
         if ("" != b.ExpressId && void 0 != b.ExpressId && f++, "" != b.ExpressId && void 0 != b.ExpressId && "" == b.ExpressName) {
             var c = a.find("a:contains('查看物流')").attr("href");
             $.ajax({
@@ -172,9 +178,10 @@
     }
 
     function n(a, b) {
+        console.log("exec : n");
         b.BuyAccount = c;
         var e = {
-            url: serviceHost + "/User/Service/SaveBuyOrder",
+            url: serviceHost + "/main/main/savebuyorder",
             data: {orderInfo: JSON.stringify(b), version: version}
         };
         chrome.extension.sendRequest({type: "ajax2", options: e}, function (c) {
@@ -183,11 +190,14 @@
     }
 
     function o(a, b, c, d) {
+        console.log("exec : o");
         var f, g, e = a.indexOf(b);
         return e > 0 ? (f = a.indexOf(c, e + b.length), g = a.substring(e + b.length, f), d && (g = g.replace(/<[^>]+>/g, "")), $.trim(g)) : ""
     }
 
     function p(a, b) {
+        console.log("exec : p");
+        console.log(localStorage.orderAddrs);
         null == d && (d = localStorage.orderAddrs ? JSON.parse(localStorage.orderAddrs) : [], null == d && (d = []));
         for (var c = d.length - 1; c >= 0; c--) if (d[c].OrderId == a && "" != d[c].OrderId) return b ? (d.splice(c, 1), !1) : !0;
         return !1
@@ -195,13 +205,14 @@
 
     function q() {
         var b, c;
+        console.log("exec : q");
         return a = $("div[data-id]"), 0 == a.length ? (setTimeout(q, 1e3), void 0) : (b = "", $("div[data-id]").each(function () {
             var a = $(this).attr("data-id");
             p(a) || (b += a + ",")
         }), "" == b ? (h(), void 0) : (c = {
-            url: serviceHost + "/User/Service/GetAddressList",
+            url: serviceHost + "/main/main/getaddresslist",
             data: {ids: b, buyAccount: $(".menu-hd a:first").text(), version: version}
-        }, chrome.extension.sendRequest({type: "ajax2", options: c}, function (a) {
+        }, console.log("q  ajax2"),chrome.extension.sendRequest({type: "ajax2", options: c}, function (a) {
             200 == a.status && a.json && a.length > 0 && ($.each(a, function (a, b) {
                 b.OrderId && !p(b.OrderId, !0) && d.push(b)
             }), localStorage.orderAddrs = JSON.stringify(d)), h()
@@ -209,5 +220,5 @@
     }
 
     var a = [], b = 0, c = "", d = null, e = !1, f = 0;
-    g()
+    init()
 }();

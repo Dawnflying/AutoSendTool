@@ -233,7 +233,7 @@ function j(a) {
     $.ajax({
         type: "post",
         dataType: "json",
-        url: serviceHost + "/User/Service/GetExpress",
+        url: serviceHost + "/main/main/getexpress",
         data: {orderId: a, comment: ""},
         success: function (a) {
             $("span:contains('请选择快递')").parent().parent().append(a.name), $("label:contains('运单号')").next().val(a.id), $("label:contains('运单号')").next().after("<input type=text value='" + a.id + "' style='width:110px;border:none' readonly />")

@@ -1,4 +1,5 @@
-﻿ var backGroundJson = {URL: "http://www.feixiongzhushou.com/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},listenTab = {};
+﻿var backGroundJson = {URL: "http://www.feixiongzhushou.com/main/plugin/", version: "1.6.0"}, fileBuffer = {},
+    tabBuffer = {}, listenTab = {};
 //var backGroundJson = {URL: "http://localhost:8089/main/plugin/", version: "1.6.0"}, fileBuffer = {}, tabBuffer = {},listenTab = {};
 chrome.extension.onRequest.addListener(function (a, c, b) {
     "sendMsg" == a.type ?
@@ -23,18 +24,33 @@ chrome.extension.onRequest.addListener(function (a, c, b) {
                                                                             "setIcon" == a.type ? setIcon(a, c, b) :
                                                                                 "getThisTab" == a.type ? b(c) :
                                                                                     "setOrder" == a.type ? setOrder(a, c, b) :
-                                                                                        "ajax" == a.type && (c = {
-        type: "post",
-        url: a.url,
-        data: a.data,
-        success: function (a) {
-            b(a)
-        },
-        error: function () {
-            b("\u8bf7\u6c42\u9519\u8bef")
-        }
-    },
-    a.cookies && (c.headers = {"set-cookie": a.cookies}), $.ajax(c))
+                                                                                        "ajax" == a.type ? (c = {
+                                                                                                type: "post",
+                                                                                                url: a.url,
+                                                                                                data: a.data,
+                                                                                                success: function (a) {
+                                                                                                    b(a)
+                                                                                                },
+                                                                                                error: function () {
+                                                                                                    b("\u8bf7\u6c42\u9519\u8bef")
+                                                                                                }
+                                                                                            },
+                                                                                            a.cookies && (c.headers = {"set-cookie": a.cookies}), $.ajax(c)) :
+                                                                                            "ajax2" == a.type && (d = a.options, d.data && (d.type = "post"),
+                                                                                                console.log("exec ajax2"),console.log(a.options),
+                                                                                                chrome.cookies.getAll({url: d.url},
+                                                                                                    function (b) {
+                                                                                                        var f, e = "";
+                                                                                                        for (f = 0; f < b.length; f++) e += b[f].name + "=" + b[f].value + "; ";
+                                                                                                        d.headers ? d.headers["set-cookie"] = e : d.headers = {"set-cookie": e}, d.complete = function (a) {
+                                                                                                            b({
+                                                                                                                status: a.status,
+                                                                                                                statusText: a.statusText,
+                                                                                                                text: a.responseText,
+                                                                                                                json: a.responseJSON
+                                                                                                            })
+                                                                                                        }, $.ajax(a.options)
+                                                                                                    }))
 });
 var requestFilter = {urls: ["http://*/*", "https://*/*"]}, extraInfoSpec = ["requestHeaders", "blocking"],
     handler = function (a) {
